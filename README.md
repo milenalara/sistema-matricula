@@ -1,20 +1,46 @@
 # Sistema de Matrícula
 
-Uma universidade pretende informatizar seu sistema de matrículas. A secretaria da universidade gera o currículo para cada semestre e mantém as informações sobre as disciplinas, professores e alunos.
+Nome: Gerar corrículo
+Ator primário: Secretária
+Fluxo principal:
+1 - Acessa o semestre
+2 - Selecionar currículo
+3 - Gerar currículo
 
-Cada curso tem um nome, um determinado número de créditos e é constituído por diversas disciplinas.
+Nome: Gerenciar informações
+Ator primário: Secretária
+Fluxo principal:
+1 - Acessa o semestre
+2 - Selecionar disciplina, professor ou aluno
+3 - Gerenciar informações
 
-Os alunos podem se matricular em 4 disciplinas como 1ª opção (obrigatórias) e em mais 2 outras alternativas (optativas).
+Nome: Consultar matrículas
+Ator primário: Professor
+Fluxo principal:
+1 - Acessa o semestre
+2 - Selecionar disciplina
+3 - Consulta matrículas
 
-Há períodos para efetuar matrículas, durante os quais um aluno pode acessar o sistema para se matricular em disciplinas e/ou para cancelar matrículas feitas anteriormente.
+Nome: Matricular em disciplinas
+Ator primário: Aluno
+Fluxo principal:
+1 - Acessa o semestre
+2 - Selecionar matrícula
+3 - Matricula na disciplina
 
-Uma disciplina só fica ativa, isto é, só vai ocorrer no semestre seguinte se, no final do período de matrículas tiver, pelo menos, 3 alunos inscritos (matriculados). Caso contrário, a disciplina será cancelada. O número máximo de alunos inscritos a uma disciplina é de 60 e quando este número é atingido, as inscrições (matrículas) para essa disciplina são encerradas.
+Nome: Cancelar matrícula
+Ator primário: Aluno
+Fluxo principal:
+1 - Acessa o semestre
+2 - Selecionar matrícula
+3 - Cancelar matrícula
 
-Após um aluno se inscrever para um semestre, o sistema de cobranças é notificado pelo sistema de matrículas, de modo que o aluno possa ser cobrado pelas disciplinas daquele semestre.
-
-Os professores podem acessar o sistema para saber quais são os alunos que estão matriculados em cada disciplina.
-
-Todos os usuários do sistema têm senhas que são utilizadas para validação do respectivo login.
+Nome: Pagar disciplina
+Ator primário: Aluno
+Fluxo principal:
+1 - Acessa o semestre
+2 - Selecionar disciplina
+3 - Pagar disciplina
 
 ## Integrantes
 * Gustavo Menezes Barbosa 
