@@ -1,0 +1,18 @@
+@startuml Diagrama Universidade
+scale 2
+left to right direction 
+actor Secretaria
+actor Professor
+actor Aluno
+
+Secretaria -- (Gerar curriculo)
+Secretaria -- (Gerenciar informações)
+
+Aluno -- (Matricular em diciplinas)
+Aluno -- (Cancelar matriculas)
+Aluno -- (Pagar disciplinas)
+
+Professor -- (Consultar matriculas)
+(Consultar matriculas) -- Aluno
+
+@enduml
