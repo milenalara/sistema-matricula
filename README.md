@@ -1,46 +1,16 @@
 # Sistema de Matrícula
 
-Nome: Gerar corrículo
-Ator primário: Secretária
-Fluxo principal:
-1 - Acessa o semestre
-2 - Selecionar currículo
-3 - Gerar currículo
+Eu como secretário quero gerar os currículos disponíveis no sistema.
 
-Nome: Gerenciar informações
-Ator primário: Secretária
-Fluxo principal:
-1 - Acessa o semestre
-2 - Selecionar disciplina, professor ou aluno
-3 - Gerenciar informações
+Eu como secretário quero gerenciar as informações relevantes dos alunos, professores e disciplinas no sistema. 
 
-Nome: Consultar matrículas
-Ator primário: Professor
-Fluxo principal:
-1 - Acessa o semestre
-2 - Selecionar disciplina
-3 - Consulta matrículas
+Eu como professor quero consultar as matrículas relevantes às minhas matérias no sistema.
 
-Nome: Matricular em disciplinas
-Ator primário: Aluno
-Fluxo principal:
-1 - Acessa o semestre
-2 - Selecionar matrícula
-3 - Matricula na disciplina
+Eu como aluno quero me matrícular em disciplinas. 
 
-Nome: Cancelar matrícula
-Ator primário: Aluno
-Fluxo principal:
-1 - Acessa o semestre
-2 - Selecionar matrícula
-3 - Cancelar matrícula
+Eu como aluno quero cancelar as matrículas relevantes. 
 
-Nome: Pagar disciplina
-Ator primário: Aluno
-Fluxo principal:
-1 - Acessa o semestre
-2 - Selecionar disciplina
-3 - Pagar disciplina
+Eu como aluno quero pagar as disciplinas que estou matriculado. 
 
 ## Integrantes
 * Gustavo Menezes Barbosa 
