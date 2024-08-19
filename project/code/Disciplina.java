@@ -1,7 +1,10 @@
+
 public class Disciplina {
     private Boolean ativa;
     private Boolean matriculasAbertas;
     
+    private Aluno[] alunos;
+
     public Boolean getAtiva() {
         return ativa;
     }
@@ -14,7 +17,14 @@ public class Disciplina {
     public void setMatriculasAbertas(Boolean matriculasAbertas) {
         this.matriculasAbertas = matriculasAbertas;
     }
-    private Aluno[60] alunos;
+    
+    public Aluno[] getAlunos() {
+        return alunos;
+    }
+    public void setAlunos(Aluno[] alunos) {
+        this.alunos = alunos;
+    }
 
+    
     
 }

@@ -1,16 +1,26 @@
 public class Aluno extends Usuario{
     
-    private Disciplina[4] disciplinas;
+    private Disciplina[] disciplinas;
 
-    public matricularEmDisciplina(Disciplina disciplina){
+    public void matricularEmDisciplina(Disciplina disciplina){
 
     }
 
-    public cancelarDisciplina(Disciplina disciplina){
+    public void cancelarDisciplina(Disciplina disciplina){
         
     }
 
-    public pagarDisciplina(Disciplina disciplina){
+    public void pagarDisciplina(Disciplina disciplina){
         
     }
+
+    public Disciplina[] getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void setDisciplinas(Disciplina[] disciplinas) {
+        this.disciplinas = disciplinas;
+    }
+
+    
 }

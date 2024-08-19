@@ -1,9 +1,9 @@
 public class Secretaria extends Usuario{
-    public gerarCurriculo(){
+    public void gerarCurriculo(){
 
     }
 
-    public gerarInformacoes(Object object){
+    public void gerarInformacoes(Object object){
         //object.toString()
     }
 }
