@@ -1,0 +1,53 @@
+@startuml Diagrama de classe universidade
+scale 2
+left to right direction 
+
+skinparam ClassAttributeIconSize 0
+class Usuario{
+    -String login
+    -String senha
+}
+
+class Secretaria{
+    +void gerarCurriculo()
+    +void gerarInformacoes(Object object)
+}
+
+
+class Professor{
+    +void consultarMatriculas(Disciplina disciplina)
+}
+
+class Aluno{
+    -Disciplina[4] disciplinas
+    +void matricularEmDisciplina(Disciplina disciplina)
+    +void cancelarDisciplina(Disciplina disciplina)
+    +void pagarDisciplina(Disciplina disciplina)
+}
+
+class Curso{
+    -String nome
+    -Int creditos
+    -Disciplina[] disciplinas
+}
+
+class Disciplina{
+    -Boolean ativa
+    -Boolean matriculasAbertas
+    -Aluno[60] alunos
+
+}
+
+Usuario <|-- Secretaria
+
+Usuario <|-- Professor
+
+Usuario <|-- Aluno
+
+Curso *-- Disciplina
+
+Professor <-- Disciplina
+
+Aluno o-- Disciplina
+
+@enduml

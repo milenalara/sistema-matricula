@@ -1,18 +1,28 @@
-@startuml Diagrama Universidade
+@startuml Diagrama de caso Universidade
 scale 2
 left to right direction 
 actor Secretaria
 actor Professor
 actor Aluno
 
-Secretaria -- (Gerar curriculo)
-Secretaria -- (Gerenciar informações)
+usecase (Notificar sistema de pagamento) as nsp
+usecase (Gerar curriculo) as gc
+usecase (Gerenciar informacoes) as gi
+usecase (Matricular em disciplinas) as med
+usecase (Cancelar matriculas) as canm
+usecase (Consultar matriculas) as conm
 
-Aluno -- (Matricular em diciplinas)
-Aluno -- (Cancelar matriculas)
-Aluno -- (Pagar disciplinas)
+Secretaria -- gc
+Secretaria -- gi
 
-Professor -- (Consultar matriculas)
-(Consultar matriculas) -- Aluno
+Aluno -- med
+Aluno -- canm
+
+Professor -- conm
+Aluno -- conm
+
+canm<.nsp : include
+med<.nsp : include
+
 
 @enduml
