@@ -19,3 +19,5 @@
 | ID | Descrição do Requisito | Prioridade |  
 |--|--|--|  
 | RNF-001 | O sistema deverá ser desenvolvido em Java | ALTA |  
+| RFN-002 | O sistema deverá ser uma aplicação de console | ALTA |  
+| RFN-003 | Os dados das entidades do sistema devem ser salvos em listas | |  
