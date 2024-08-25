@@ -1,6 +1,5 @@
 ﻿# Requisitos funcionais e não funcionais  
-  
-## Requisitos funcionais  
+ 
 ## Requisitos funcionais  
 | ID     | Descrição do Requisito | Prioridade |  Depende de |
 |--------|------------------------|------------|-------------|  
