@@ -15,7 +15,7 @@ class Secretaria{
 
 
 class Professor{
-    +void consultarMatriculas(Disciplina disciplina)
+    +void consultarMatriculas(Turma turma)
 }
 
 class Aluno{
@@ -32,10 +32,16 @@ class Curso{
 }
 
 class Disciplina{
+    -String nome
     -Boolean ativa
     -Boolean matriculasAbertas
-    -Aluno[60] alunos
+    -Int cargaHoraria
+    -Int numCreditos 
+}
 
+class Turma{
+    -Aluno[60] alunos
+    -Professor professor
 }
 
 Usuario <|-- Secretaria
@@ -46,7 +52,13 @@ Usuario <|-- Aluno
 
 Curso *-- Disciplina
 
-Professor <-- Disciplina
+Turma *-- Disciplina
+
+Turma *-- Professor
+
+Turma *-- Aluno
+
+Professor <-- Turma
 
 Aluno o-- Disciplina
 
