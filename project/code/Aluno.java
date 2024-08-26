@@ -27,7 +27,6 @@ public class Aluno extends Usuario{
 
             for (int i = 1; i < line.length; i++) {
                 String[] str = line[0].split(":");
-                
             }
         }
 
