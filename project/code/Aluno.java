@@ -13,8 +13,6 @@ public class Aluno extends Usuario{
 
         Scanner scan = new Scanner(new File("project/code/Matriculas.txt"));
 
-        int i = 0;
-
         // registro de cada aluno é uma linha
         // dados separados por tab (\t)
         // chave e valor separados por ":"
@@ -27,7 +25,10 @@ public class Aluno extends Usuario{
             String[] loginStr = line[0].split(":");
             this.setLogin(loginStr[0]);
 
-            for
+            for (int i = 1; i < line.length; i++) {
+                String[] str = line[0].split(":");
+                
+            }
         }
 
         scan.close();
