@@ -1,5 +1,7 @@
-public class Turma {
+
+public class Turma extends Componente{
     
+
     private Aluno[] alunos;
     private Professor professor;
     private Disciplina disciplina;
@@ -21,6 +23,15 @@ public class Turma {
     }
     public void setDisciplina(Disciplina disciplina) {
         this.disciplina = disciplina;
+    }
+
+    @Override
+    public String toString() {
+        String info = "ID: "+ this.getId() +"Professor: "+ professor + "Disciplina: "+ disciplina;
+        for (Aluno aluno : alunos) {
+            info = info + aluno.getLogin();
+        }
+        return info;
     }
 
     

@@ -5,10 +5,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Usuario{
+public class Usuario extends Componente{
     private String login;
     private String senha;
-    private static Usuario[] usuarios = new Usuario[1000];
+
+    @Override
+    public String getId(){
+        return login;
+    }
 
     public Usuario(String login, String senha){
         this.login = login;
@@ -38,7 +42,7 @@ public class Usuario{
 
             String[] line = scan.nextLine().split("\t");
 
-            usuarios[iterUsuario] = new Usuario(line[0], line[1]);
+            Usuario.getAll()[iterUsuario] = new Usuario(line[0], line[1]);
             
         }
         scan.close();
@@ -61,15 +65,5 @@ public class Usuario{
         return this.login + "\t" + this.senha;
     }
 
-    public static Usuario[] getUsuarios() {
-        return usuarios;
-    }
 
-    public static void setUsuarios(Usuario[] usuarios) {
-        Usuario.usuarios = usuarios;
-    }
-
-    
-
-    
 }

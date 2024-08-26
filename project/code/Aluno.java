@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Aluno extends Usuario{
-    private static Aluno[] alunos;
     private Disciplina[] disciplinas;
 
     public void lerMatriculas() throws FileNotFoundException{
@@ -33,14 +32,7 @@ public class Aluno extends Usuario{
         scan.close();
     }
 
-        public void salvarMatricula() throws IOException{
-        
-        BufferedWriter escritor = new BufferedWriter(new FileWriter("project/code/Matriculas.txt", true));
-        
-        escritor.append("");
 
-        escritor.close();
-    }
 
 
     public void matricularEmDisciplina(Disciplina disciplina){
@@ -64,6 +56,20 @@ public class Aluno extends Usuario{
         this.disciplinas = disciplinas;
     }
 
+    @Override
+    public String toString() {
+
+        String infos = "Login: " + this.getLogin()+
+        "Senha: " + this.getSenha()+
+        "Disciplinas em estudo: ";
+
+        for (Disciplina disciplina : disciplinas) {
+            infos = infos + disciplina.getNome();            
+        }
+
+        return infos;
+
+    }
     
 }
 

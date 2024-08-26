@@ -2,23 +2,14 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Disciplina {
+public class Disciplina extends Componente{
     private String nome;
     private Boolean ativa;
-    private Boolean matriculasAbertas;
-    private static Disciplina[] disciplinas = new Disciplina[1000];
-    
-    public Disciplina(String nome){
-        this.nome = nome;
-        this.ativa = true;
-        this.matriculasAbertas = true;
+    private Boolean isMatriculasAbertas;
 
-        for (int i = 0; i < disciplinas.length; i++) {
-            if(disciplinas[i]==null){
-                disciplinas[i] = this;
-            }
-        }
-        
+    @Override
+    public String getId() {
+        return nome;
     }
 
     public void lerArquivo() throws FileNotFoundException{
@@ -33,7 +24,7 @@ public class Disciplina {
 
             this.ativa = Boolean.valueOf(line[1]);
 
-            this.matriculasAbertas = Boolean.valueOf(line[2]);
+            this.isMatriculasAbertas = Boolean.valueOf(line[2]);
             
         }
         scan.close();
@@ -46,27 +37,27 @@ public class Disciplina {
     public void setAtiva(Boolean ativa) {
         this.ativa = ativa;
     }
-    public Boolean getMatriculasAbertas() {
-        return matriculasAbertas;
+    
+
+    public void setNome(String nome) {
+        this.nome = nome;
     }
-    public void setMatriculasAbertas(Boolean matriculasAbertas) {
-        this.matriculasAbertas = matriculasAbertas;
+
+    public Boolean getIsMatriculasAbertas() {
+        return isMatriculasAbertas;
+    }
+
+    public void setIsMatriculasAbertas(Boolean isMatriculasAbertas) {
+        this.isMatriculasAbertas = isMatriculasAbertas;
     }
 
     public String getNome() {
         return nome;
     }
-    public static Disciplina[] getDisciplinas() {
-        return disciplinas;
-    }
 
-    public static Disciplina searchDisciplina(String nome) {
-        for (Disciplina disciplina : disciplinas) {
-            if(disciplina.getNome().equals(nome)) {
-                return disciplina;
-            }
-        }
-        return null;
+    @Override
+    public String toString() {
+        return "Nome: " + nome + "Ativa: "+ ativa + "Matriculas Abertas: " + isMatriculasAbertas; 
     }
 
 
