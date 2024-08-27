@@ -2,6 +2,7 @@ public class Secretario extends Usuario{
     
     public Secretario(String login, String senha) {
         super(login, senha);
+        Secretario.addToList(this);
     }
 
     public static void gerarCurriculo(){

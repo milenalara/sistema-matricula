@@ -7,6 +7,15 @@ public class Disciplina extends Componente{
     private Boolean ativa;
     private Boolean isMatriculasAbertas;
 
+    
+
+    public Disciplina(String nome, Boolean ativa, Boolean isMatriculasAbertas) {
+        this.nome = nome;
+        this.ativa = ativa;
+        this.isMatriculasAbertas = isMatriculasAbertas;
+        Disciplina.addToList(this);
+    }
+
     @Override
     public String getId() {
         return nome;

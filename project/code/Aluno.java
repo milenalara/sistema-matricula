@@ -70,6 +70,11 @@ public class Aluno extends Usuario{
         return infos;
 
     }
+
+    public Aluno(String login, String senha){
+        super(login, senha);
+        Aluno.addToList(this);
+    }
     
 }
 

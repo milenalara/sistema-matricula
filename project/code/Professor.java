@@ -2,6 +2,7 @@ public class Professor extends Usuario{
     
     public Professor(String login, String senha) {
         super(login, senha);
+        Professor.addToList(this);
     }
 
     public void consultarMatriculas(Turma turma){

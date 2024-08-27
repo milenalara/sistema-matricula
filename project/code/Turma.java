@@ -5,7 +5,15 @@ public class Turma extends Componente{
     private Aluno[] alunos;
     private Professor professor;
     private Disciplina disciplina;
+
     
+    
+    public Turma(Aluno[] alunos, Professor professor, Disciplina disciplina) {
+        this.alunos = alunos;
+        this.professor = professor;
+        this.disciplina = disciplina;
+        Turma.addToList(this);
+    }
     public Aluno[] getAlunos() {
         return alunos;
     }

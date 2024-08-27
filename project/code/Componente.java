@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.Random;
 
 
-public class Componente {
+public class Componente implements Serializable{
     private final String ID = String.valueOf(new Random().nextInt(5000));
 
     private static Componente[] componentes = new Componente[1000];
@@ -11,8 +12,7 @@ public class Componente {
         for (Componente componente : componentes) {
             if (identifier == componente.getId()) {
                 return componente;
-            }
-            ;
+            };
         }
         System.out.println("Componente " + identifier + " nao encontrado"); // Mudar para exception
         return new Componente();
@@ -34,6 +34,12 @@ public class Componente {
     public static Componente[] getAll() {
         return componentes;
     }
+
+    public static void setAll(Componente[] componentes) {
+        Componente.componentes = componentes;
+    }
+
+    
 
 
 

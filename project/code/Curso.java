@@ -3,6 +3,13 @@ public class Curso extends Componente{
     private int creditos;
     private Disciplina[] disciplinas;
 
+    public Curso(String nome, int creditos, Disciplina[] disciplinas){
+        this.nome = nome;
+        this.creditos = creditos;
+        this.disciplinas = disciplinas;
+        Curso.addToList(this);
+    }
+
     @Override
     public String toString(){
 
