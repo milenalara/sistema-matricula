@@ -15,6 +15,7 @@ public class Usuario extends Componente{
     }
 
     public Usuario(String login, String senha){
+        super();
         this.login = login;
         this.senha = senha;
     }

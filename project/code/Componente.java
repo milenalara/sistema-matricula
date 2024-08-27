@@ -1,21 +1,27 @@
 import java.io.Serializable;
 import java.util.Random;
 
-
-public class Componente implements Serializable{
+public class Componente implements Serializable {
     private final String ID = String.valueOf(new Random().nextInt(5000));
 
     private static Componente[] componentes = new Componente[1000];
 
+    public Componente() {
+        addToList(this);
+    }
+
     public static Componente getById(String identifier) {
 
         for (Componente componente : componentes) {
-            if (identifier == componente.getId()) {
-                return componente;
-            };
+            if (componente != null) {
+                if (identifier == componente.getId()) {
+                    return componente;
+                }
+                ;
+            }
         }
         System.out.println("Componente " + identifier + " nao encontrado"); // Mudar para exception
-        return new Componente();
+        return null;
     }
 
     public static void addToList(Componente comp) {
@@ -39,9 +45,4 @@ public class Componente implements Serializable{
         Componente.componentes = componentes;
     }
 
-    
-
-
-
-    
 }

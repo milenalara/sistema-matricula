@@ -10,6 +10,7 @@ public class Disciplina extends Componente{
     
 
     public Disciplina(String nome, Boolean ativa, Boolean isMatriculasAbertas) {
+        super();
         this.nome = nome;
         this.ativa = ativa;
         this.isMatriculasAbertas = isMatriculasAbertas;

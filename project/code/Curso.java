@@ -4,6 +4,7 @@ public class Curso extends Componente{
     private Disciplina[] disciplinas;
 
     public Curso(String nome, int creditos, Disciplina[] disciplinas){
+        super();
         this.nome = nome;
         this.creditos = creditos;
         this.disciplinas = disciplinas;

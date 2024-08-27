@@ -1,5 +1,6 @@
 import java.io.ObjectOutputStream;
 import java.nio.file.NoSuchFileException;
+import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -46,16 +47,17 @@ public class GerenciadorDeArquivos {
                         compList[compIter] = readComp;
                     }
                     compIter++;
-                } catch (Exception e) {
-                    break;
+                } catch (EOFException e) {
+                    oInput.close();
+                    return compList;
                 }
             }
-            oInput.close();
-            return compList;
         }catch(FileNotFoundException fileE){
             new File("project/code/data/" + classe.getSimpleName() + ".txt").createNewFile();
             
             return null;
+        }catch(EOFException eofe){
+            return new Componente[1000];
         } catch (Exception e) {
             System.out.println("Line 53; GerenciadorDeArquivos: " + e);
             return null;

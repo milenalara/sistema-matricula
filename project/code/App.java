@@ -50,16 +50,18 @@ public class App {
             case "2":
                 System.out.println(
                         "1)Criar um novo registro\n2)Acessar um existente");
-                String nextLine = scan.nextLine();
-                if (nextLine == "1") {
-                    caseCriarRegistro(scan);
-                } else {
-                    if (nextLine == "2") {
+                switch (scan.nextLine()) {
+                    case "1":
+                        caseCriarRegistro(scan);
+                        break;
+                    case "2":
                         Secretario.gerarInformacoes(Componente.getById(scan.nextLine()));
-                    } else {
-                        System.out.println("Opcao invalida");
-                    }
+                        break;
+                    default:
+                    System.out.println("opcao invalida");
+                        break;
                 }
+
                 break;
 
             default:
@@ -112,20 +114,21 @@ public class App {
                 Boolean matrAbertas = scan.nextBoolean();
                 new Disciplina(nomeDisc, ativa, matrAbertas);
                 break;
-                case "4":
+            case "4":
                 System.out.println("Digite, em ordem, o login e senha");
                 String loginP = scan.nextLine();
                 String senhaP = scan.nextLine();
                 new Professor(loginP, senhaP);
                 break;
-                case "5":
+            case "5":
                 System.out.println("Digite, em ordem, o login e senha");
                 String loginS = scan.nextLine();
                 String senhaS = scan.nextLine();
                 new Secretario(loginS, senhaS);
                 break;
-                case "6":
-                System.out.println("Digite, em ordem, o professor, a disciplina e os alunos (Digite FIM para teriminar)");
+            case "6":
+                System.out
+                        .println("Digite, em ordem, o professor, a disciplina e os alunos (Digite FIM para teriminar)");
                 String prof = scan.nextLine();
                 String disc = scan.nextLine();
                 List<Aluno> alunos = new ArrayList<>();

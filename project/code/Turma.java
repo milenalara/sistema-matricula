@@ -9,6 +9,7 @@ public class Turma extends Componente{
     
     
     public Turma(Aluno[] alunos, Professor professor, Disciplina disciplina) {
+        super();
         this.alunos = alunos;
         this.professor = professor;
         this.disciplina = disciplina;
