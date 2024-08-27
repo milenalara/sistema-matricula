@@ -1,51 +1,69 @@
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.lang.reflect.Field;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Aluno extends Usuario{
+public class Aluno extends Usuario {
     private Disciplina[] disciplinas;
 
-    public void lerMatriculas() throws FileNotFoundException{
+    public Aluno(String login, String senha) {
+        super(login, senha);
+        // TODO Auto-generated constructor stub
+    }
 
+    public Aluno(String login, String senha, String[] disciplinas) {
+        super(login, senha);
+        for (String string : disciplinas) {
+            Disciplina disciplina = (Disciplina)Disciplina.getById(disciplinas[0]);
+        }
+    }
+
+    public void lerMatriculas() throws FileNotFoundException {
         Scanner scan = new Scanner(new File("project/code/Matriculas.txt"));
 
-        // registro de cada aluno é uma linha
-        // dados separados por tab (\t)
-        // chave e valor separados por ":"
-        // exemplo: login:valor\
- disciplina1:nome    disciplina2:nome  disciplinaN:nome 
-        while(scan.hasNextLine()){
+        while (scan.hasNextLine()) {
 
             String[] line = scan.nextLine().split("\t");
-
-            String[] loginStr = line[0].split(":");
-            this.setLogin(loginStr[0]);
+            String login = line[0];
 
             for (int i = 1; i < line.length; i++) {
-                String[] str = line[0].split(":");
+                Disciplina disciplina = (Disciplina) Disciplina.getById(line[i]);
+                Disciplina.addToList(disciplina);
             }
         }
 
         scan.close();
     }
 
+    public void salvarUsuario() throws IOException {
 
+        BufferedWriter escritor = new BufferedWriter(new FileWriter("project/code/Matriculas.txt", true));
 
-
-    public void matricularEmDisciplina(Disciplina disciplina){
+        escritor.append(this.getLogin());
         
+        for (Disciplina disciplina : disciplinas) {
+            escritor.append("\t");
+            escritor.append(disciplina.getNome());
+        }
+
+        escritor.append("\n");
+
+        escritor.close();
+    }
+
+    public void matricularEmDisciplina(Disciplina disciplina) {
 
     }
 
-    public void cancelarDisciplina(Disciplina disciplina){
-        
+    public void cancelarDisciplina(Disciplina disciplina) {
+
     }
 
-    public void pagarDisciplina(Disciplina disciplina){
-        
+    public void pagarDisciplina(Disciplina disciplina) {
+
     }
 
     public Disciplina[] getDisciplinas() {
@@ -59,17 +77,16 @@ public class Aluno extends Usuario{
     @Override
     public String toString() {
 
-        String infos = "Login: " + this.getLogin()+
-        "Senha: " + this.getSenha()+
-        "Disciplinas em estudo: ";
+        String infos = "Login: " + this.getLogin() +
+                "Senha: " + this.getSenha() +
+                "Disciplinas em estudo: ";
 
         for (Disciplina disciplina : disciplinas) {
-            infos = infos + disciplina.getNome();            
+            infos = infos + disciplina.getNome();
         }
 
         return infos;
 
     }
-    
-}
 
+}

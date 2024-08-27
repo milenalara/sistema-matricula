@@ -60,8 +60,46 @@ public class App {
         System.out.println(Turma.getById(scan.nextLine()).toString());
     }
 
-    public static void caseAluno(Scanner scan){
+    public static void caseAluno(Scanner scan) {
         System.out.println("Bem vindo ao portal do aluno\nO que deseja fazer?\n1)DEBUG\n2)DEBUG");
         // to-do: Classe aluno
+        System.out.println("1 - registrar aluno");
+        System.out.println("2 - listar alunos");
+        String opc;
+
+        do {
+            opc = scan.nextLine();
+
+            switch (opc) {
+                case "0":
+                    break;
+                case "1":
+                    System.out.println("login: ");
+                    String login = scan.nextLine();
+                    System.out.println("senha: ");
+                    String senha = scan.nextLine();
+                    
+                    String[] disciplinas = new String[6];
+                    System.out.println("disciplina 1: ");
+                    disciplinas[0] = scan.nextLine();
+                    System.out.println("disciplina 2: ");
+                    disciplinas[1] = scan.nextLine();
+                    System.out.println("disciplina 3: ");
+                    disciplinas[2] = scan.nextLine();
+                    System.out.println("disciplina 4: ");
+                    disciplinas[3] = scan.nextLine();
+
+                    Aluno aluno = new Aluno(login, senha, disciplinas);
+                    Aluno.addToList(aluno);
+                    break;
+                case "2":
+                    for (Aluno al : (Aluno[]) Aluno.getAll()) {
+                        System.out.println(al.toString());
+                    }
+                    break;
+                default:
+                    break;
+            }
+        } while (!opc.equals("0"));
     }
 }
