@@ -3,7 +3,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Scanner;
 
-
 public class App {
     public static void main(String[] args) throws IOException, IllegalArgumentException, IllegalAccessException,
             InstantiationException, InvocationTargetException, NoSuchMethodException, SecurityException {
@@ -52,22 +51,19 @@ public class App {
 
             case "2":
                 System.out.println(
-                        "1)Criar um novo registro\n2)Acessar um existente\n3)Deletar um registro\n4)Atualizar um regsitro\n5)Ver todos registros");
+                        "1)Criar um novo registro\n2)Acessar registros\n3)Deletar um registro\n4)Atualizar um registro\n5)Ver todos registros");
                 switch (scan.nextLine()) {
                     case "1":
                         caseCriarRegistro(scan);
                         break;
                     case "2":
-                        // TODO));
+                        verTodosRegistros();
                         break;
                     case "3":
-                        // TODO));
+                        deletarRegistro(scan);
                         break;
                     case "4":
-                        // TODO));
-                        break;
-                        case "5":
-                        verTodosRegistros();
+                        atualizarRegistro(scan);
                         break;
                     default:
                         System.out.println("opcao invalida");
@@ -125,7 +121,7 @@ public class App {
         }
     }
 
-    private static void verTodosRegistros(){
+    private static void verTodosRegistros() {
 
         System.out.println("Alunos:");
         verRegistros(Aluno.getAll());
@@ -147,15 +143,100 @@ public class App {
 
     }
 
-    private static <T> void verRegistros(List<T> lista){
+    private static <T> void verRegistros(List<T> lista) {
 
-        if(lista!=null&&!lista.isEmpty()){
-        for (T t : lista) {
-            System.out.println(t);}
-        }else{
+        if (lista != null && !lista.isEmpty()) {
+            for (T t : lista) {
+                System.out.println(t);
+            }
+        } else {
             System.out.println("Nao ha registros");
         }
+    }
 
+    private static void deletarRegistro(Scanner scan) {
+        System.out.println(
+                "Qual é o tipo de registro?\n1)Aluno\n2)Curso\n3)Disciplina\n4)Professor\n5)Secretario\n6)Turma");
+        String opt = scan.nextLine();
+        System.out.println("Digite o identificador");
+        String id = scan.nextLine();
+        try {
+            switch (opt) {
+                case "1":
+                    Aluno.getAll().remove(Aluno.getById(id));
+                    Usuario u1 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                    Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
+                    break;
+                case "2":
+                Curso.addToList((Curso) Creater.createComponentManual(Curso.class, scan));
+                    Curso.getAll().remove(Curso.getById(id));
+                    break;
+                case "3":
+                Disciplina.addToList((Disciplina) Creater.createComponentManual(Disciplina.class, scan));
+                    Disciplina.getAll().remove(Disciplina.getById(id));
+                    break;
+                case "4":
+                Usuario u4 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                Professor.addToList(new Professor(u4.getLogin(), u4.getSenha()));
+                    Professor.getAll().remove(Professor.getById(id));
+                    break;
+                case "5":
+                    Secretario.getAll().remove(Secretario.getById(id));
+                    Usuario u5 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                    Secretario.addToList(new Secretario(u5.getLogin(), u5.getSenha()));
+                    break;
+                case "6":
+                    Turma.getAll().remove(Turma.getById(id));
+                    Turma.addToList((Turma) Creater.createComponentManual(Turma.class, scan));
+                    break;
+
+                default:
+                    System.out.println("Opcao invalida");
+                    break;
+            }
+        } catch (Exception e) {
+            System.out.println(id + " not found");
+        }
 
     }
-}
+
+    private static void atualizarRegistro(Scanner scan) {
+
+        System.out.println(
+                "Qual é o tipo de registro?\n1)Aluno\n2)Curso\n3)Disciplina\n4)Professor\n5)Secretario\n6)Turma");
+        String opt = scan.nextLine();
+        System.out.println("Digite o identificador");
+        String id = scan.nextLine();
+        try {
+            switch (opt) {
+                case "1":
+                    Aluno.getAll().remove(Aluno.getById(id));
+
+                    break;
+                case "2":
+                    Curso.getAll().remove(Curso.getById(id));
+                    break;
+                case "3":
+                    Disciplina.getAll().remove(Disciplina.getById(id));
+                    break;
+                case "4":
+                    Professor.getAll().remove(Professor.getById(id));
+                    break;
+                case "5":
+                    Secretario.getAll().remove(Secretario.getById(id));
+                    break;
+                case "6":
+                    Turma.getAll().remove(Turma.getById(id));
+                    break;
+
+                default:
+                    System.out.println("Opcao invalida");
+                    break;
+            }
+        } catch (Exception e) {
+            System.out.println(id + " not found");
+        }
+
+    }
+    
+    }
