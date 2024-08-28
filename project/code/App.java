@@ -78,8 +78,32 @@ public class App {
     }
 
     public static void caseAluno(Scanner scan) {
-        System.out.println("Bem vindo ao portal do aluno\nO que deseja fazer?\n1)DEBUG\n2)DEBUG");
-        // to-do: Classe aluno
+        System.out.println("Bem vindo ao portal do aluno\nO que deseja fazer?\n1)MATRICULAR EM DISCIPLINA\n2)CANCELAR MATRICULA EM DISCIPLINA\n3)LISTAS DISCIPLINAS MATRICULADAS\n4)ENCERRAR");
+        String op = scan.nextLine();
+        do {
+            switch (op) {
+                case "1":
+                    System.out.println("Informe o login");
+                    String login = scan.nextLine();
+                    System.out.println("Informe a senha:");
+                    String senha = scan.nextLine();
+                    System.out.println("Informe o nome da disciplina desejada:");
+                    String disc = scan.nextLine();
+                    Disciplina disciplina = (Disciplina)Disciplina.getById(disc);
+                    Aluno aluno = new Aluno(login, senha);
+                    break;
+                case "2":
+                
+                    break;
+                case "3":
+                    Aluno.deserialize();
+                    break;
+                default:
+                System.out.println("Opção inválida");
+                    break;
+            }
+            op = scan.nextLine();
+        } while (!op.equals("0"));
     }
 
     public static void caseCriarRegistro(Scanner scan) {
@@ -95,7 +119,7 @@ public class App {
                 break;
             case "2":
                 System.out.println(
-                        "Digite, em ordem, o nome, os cretidos e o nome das disciplinas (Digite FIM para teriminar)");
+                        "Digite, em ordem, o nome, os cretidos e o nome das disciplinas (Digite FIM para terminar)");
                 String nome = scan.nextLine();
                 int creditos = scan.nextInt();
                 List<Disciplina> disciplinas = new ArrayList<>();

@@ -45,4 +45,10 @@ public class Componente implements Serializable {
         Componente.componentes = componentes;
     }
 
+    public static void printAllComponents() {
+        for (Componente componente : componentes) {
+            System.out.println(componente.toString());
+        }
+    }
+
 }
