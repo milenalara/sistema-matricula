@@ -1,8 +1,18 @@
 import java.util.List;
+import java.io.Serializable;
+import java.util.ArrayList;
 
-public class Turma{
+public class Turma implements Serializable {
 
+    private String name;
+    private String[] alunosIds = new String[1000];
+    private String professorId;
+    private String disciplinaId;
     private static List<Turma> turmas;
+
+    public Turma() {
+
+    }
 
     public static Turma getById(String identifier) {
 
@@ -10,59 +20,49 @@ public class Turma{
             if (componente != null) {
                 if (identifier == componente.getId()) {
                     return componente;
-                };
+                }
+                ;
             }
         }
         System.out.println("Componente " + identifier + " nao encontrado");
         return null;
     }
-    
-    public static void addToList(Turma turma){
+
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    public static void addToList(Turma turma) {
+        if (Turma.turmas == null) {
+            Turma.turmas = new ArrayList();
+        }
         turmas.add(turma);
     }
 
-    public static List<Turma> getAll(){
+    public static List<Turma> getAll() {
         return turmas;
     }
-    
-    private String name;
-    private Aluno[] alunos;
-    private Professor professor;
-    private Disciplina disciplina;
 
-    
-    
-    public Turma(Aluno[] alunos, Professor professor, Disciplina disciplina) {
+    public Turma(String[] alunosIds, String professor, String disciplina) {
         super();
-        this.alunos = alunos;
-        this.professor = professor;
-        this.disciplina = disciplina;
+        this.alunosIds = alunosIds;
+        this.professorId = professor;
+        this.disciplinaId = disciplina;
         Turma.addToList(this);
     }
-    public Aluno[] getAlunos() {
-        return alunos;
+
+    public String[] getAlunosIds() {
+        return alunosIds;
     }
-    public void setAlunos(Aluno[] alunos) {
-        this.alunos = alunos;
-    }
-    public Professor getProfessor() {
-        return professor;
-    }
-    public void setProfessor(Professor professor) {
-        this.professor = professor;
-    }
-    public Disciplina getDisciplina() {
-        return disciplina;
-    }
-    public void setDisciplina(Disciplina disciplina) {
-        this.disciplina = disciplina;
+
+    public void setAlunosIds(String[] alunosIds) {
+        this.alunosIds = alunosIds;
     }
 
     @Override
     public String toString() {
-        String info = "ID: "+ this.getId() +"Professor: "+ professor + "Disciplina: "+ disciplina;
-        for (Aluno aluno : alunos) {
-            info = info + aluno.getLogin();
+        String info = "ID: " + this.getId() + "Professor: " + professorId + " Disciplina: " + disciplinaId + " Alunos:";
+        for (String aluno : alunosIds) {
+            if (aluno != null) {
+                info = info + " " + aluno;
+            }
         }
         return info;
     }
@@ -87,7 +87,20 @@ public class Turma{
         this.name = name;
     }
 
+    public String getProfessorId() {
+        return professorId;
+    }
 
-    
+    public void setProfessorId(String professorId) {
+        this.professorId = professorId;
+    }
+
+    public String getDisciplinaId() {
+        return disciplinaId;
+    }
+
+    public void setDisciplinaId(String disciplinaId) {
+        this.disciplinaId = disciplinaId;
+    }
 
 }

@@ -2,8 +2,9 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 import java.util.List;
+import java.io.Serializable;
 
-public class Disciplina{
+public class Disciplina implements Serializable{
     private String nome;
     private Boolean ativa;
     private Boolean isMatriculasAbertas;

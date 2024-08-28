@@ -1,8 +1,8 @@
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
 
 public class App {
     public static void main(String[] args) throws IOException, IllegalArgumentException, IllegalAccessException,
@@ -52,21 +52,28 @@ public class App {
 
             case "2":
                 System.out.println(
-                        "1)Criar um novo registro\n2)Acessar um existente");
+                        "1)Criar um novo registro\n2)Acessar um existente\n3)Deletar um registro\n4)Atualizar um regsitro\n5)Ver todos registros");
                 switch (scan.nextLine()) {
                     case "1":
                         caseCriarRegistro(scan);
                         break;
                     case "2":
-                        System.out.println(Componente.getById(scan.nextLine())); //TODO));
+                        // TODO));
+                        break;
+                    case "3":
+                        // TODO));
+                        break;
+                    case "4":
+                        // TODO));
+                        break;
+                        case "5":
+                        verTodosRegistros();
                         break;
                     default:
                         System.out.println("opcao invalida");
                         break;
                 }
-
                 break;
-
             default:
                 System.out.println("Favor selecionar uma opção válida");
                 break;
@@ -92,58 +99,63 @@ public class App {
 
         switch (scan.nextLine()) {
             case "1":
-                System.out.println("Digite, em ordem, o login e senha");
-                String login = scan.nextLine();
-                String senha = scan.nextLine();
-                new Aluno(login, senha);
+                Usuario u1 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
                 break;
             case "2":
-                System.out.println(
-                        "Digite, em ordem, o nome, os cretidos e o nome das disciplinas (Digite FIM para teriminar)");
-                String nome = scan.nextLine();
-                int creditos = scan.nextInt();
-                List<Disciplina> disciplinas = new ArrayList<>();
-                String disciplina = scan.nextLine();
-                while (disciplina != "FIM") {
-                    disciplinas.add((Disciplina) Disciplina.getById(disciplina));
-                }
-                Disciplina[] disciplinaList = (Disciplina[]) disciplinas.toArray();
-                new Curso(nome, creditos, disciplinaList);
+                Curso.addToList((Curso) Creater.createComponentManual(Curso.class, scan));
                 break;
             case "3":
-                System.out.println(
-                        "Digite, em ordem, o nome, se esta ativa (true ou false) e se as matriculas estao abertas (true ou false)");
-                String nomeDisc = scan.nextLine();
-                Boolean ativa = scan.nextBoolean();
-                Boolean matrAbertas = scan.nextBoolean();
-                new Disciplina(nomeDisc, ativa, matrAbertas);
+                Disciplina.addToList((Disciplina) Creater.createComponentManual(Disciplina.class, scan));
                 break;
             case "4":
-                Usuario u = (Usuario) Creater.createComponentManual(Usuario.class, scan);
-                Professor.addToList(new Professor(u.getLogin(), u.getSenha()));
+                Usuario u4 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                Professor.addToList(new Professor(u4.getLogin(), u4.getSenha()));
                 break;
             case "5":
-                System.out.println("Digite, em ordem, o login e senha");
-                String loginS = scan.nextLine();
-                String senhaS = scan.nextLine();
-                new Secretario(loginS, senhaS);
+                Usuario u5 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                Secretario.addToList(new Secretario(u5.getLogin(), u5.getSenha()));
                 break;
             case "6":
-                System.out
-                        .println("Digite, em ordem, o professor, a disciplina e os alunos (Digite FIM para teriminar)");
-                String prof = scan.nextLine();
-                String disc = scan.nextLine();
-                List<Aluno> alunos = new ArrayList<>();
-                String aluno = scan.nextLine();
-                while (aluno != "FIM") {
-                    alunos.add((Aluno) Aluno.getById(aluno));
-                }
-                Aluno[] alunoList = (Aluno[]) alunos.toArray();
-                new Turma(alunoList, (Professor) Professor.getById(prof), (Disciplina) Disciplina.getById(disc));
+                Turma.addToList((Turma) Creater.createComponentManual(Turma.class, scan));
                 break;
             default:
                 System.out.println("Favor selecionar uma opção válida");
                 break;
         }
+    }
+
+    private static void verTodosRegistros(){
+
+        System.out.println("Alunos:");
+        verRegistros(Aluno.getAll());
+
+        System.out.println("Cursos:");
+        verRegistros(Curso.getAll());
+
+        System.out.println("Disciplina");
+        verRegistros(Disciplina.getAll());
+
+        System.out.println("Professores:");
+        verRegistros(Professor.getAll());
+
+        System.out.println("Secretarios");
+        verRegistros(Secretario.getAll());
+
+        System.out.println("Turmas");
+        verRegistros(Turma.getAll());
+
+    }
+
+    private static <T> void verRegistros(List<T> lista){
+
+        if(lista!=null&&!lista.isEmpty()){
+        for (T t : lista) {
+            System.out.println(t);}
+        }else{
+            System.out.println("Nao ha registros");
+        }
+
+
     }
 }

@@ -1,10 +1,10 @@
-
+import java.io.Serializable;
 import java.util.List;
 
-public class Curso{
+public class Curso implements Serializable{
     private String nome;
     private int creditos;
-    private Disciplina[] disciplinas;
+    private String[] disciplinasIds;
 
     private static List<Curso> cursos;
     
@@ -29,11 +29,11 @@ public class Curso{
     }
    
 
-    public Curso(String nome, int creditos, Disciplina[] disciplinas){
+    public Curso(String nome, int creditos, String[] disciplinasId){
         super();
         this.nome = nome;
         this.creditos = creditos;
-        this.disciplinas = disciplinas;
+        this.disciplinasIds = disciplinasId;
         Curso.addToList(this);
     }
 
@@ -42,8 +42,8 @@ public class Curso{
 
         String infos =  nome + "Creditos: " + String.valueOf(creditos) + "Disciplinas: ";
 
-        for (Disciplina disciplina : disciplinas) {
-            infos = infos + disciplina.getNome() + "\t";
+        for (String disciplina : disciplinasIds) {
+            infos = infos + disciplina + "\t";
         }
 
         return infos;
@@ -64,12 +64,6 @@ public class Curso{
     }
     public void setCreditos(int creditos) {
         this.creditos = creditos;
-    }
-    public Disciplina[] getDisciplinas() {
-        return disciplinas;
-    }
-    public void setDisciplinas(Disciplina[] disciplinas) {
-        this.disciplinas = disciplinas;
     }
 
     public static void setAll(List<Curso> cursos) {

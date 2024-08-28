@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Secretario extends Usuario{
+public class Secretario extends Usuario {
 
     private static List<Secretario> secretarios;
 
@@ -10,41 +10,44 @@ public class Secretario extends Usuario{
             if (componente != null) {
                 if (identifier == componente.getId()) {
                     return componente;
-                };
+                }
+                ;
             }
         }
         System.out.println("Componente " + identifier + " nao encontrado");
         return null;
     }
-    
-    
-    public static void addToList(Secretario secretario){
+
+    public static void addToList(Secretario secretario) {
         secretarios.add(secretario);
     }
 
-    public static List<Secretario> getAll(){
+    public static List<Secretario> getAll() {
         return secretarios;
     }
-    
+
     public Secretario(String login, String senha) {
         super(login, senha);
         Secretario.addToList(this);
     }
 
-    public static void gerarCurriculo(){
-        if(!Curso.getAll().isEmpty()){
+    public static void gerarCurriculo() {
+
+        if (Curso.getAll()!=null&&!Curso.getAll().isEmpty()) {
             System.out.println("Cursos:");
-        for (Curso curso : Curso.getAll()) {
-            System.out.println(curso.toString());
-        }}else{
+            for (Curso curso : Curso.getAll()) {
+                System.out.println(curso.toString());
+            }
+        } else {
             System.out.println("Nao ha cursos no momento");
         }
 
-        if(!Professor.getAll().isEmpty()){
-        System.out.println("Professores:");
-        for (Professor professor : Professor.getAll()) {
-            System.out.println(professor.getId());
-        }}else{
+        if (Professor.getAll()!=null&&!Professor.getAll().isEmpty()) {
+            System.out.println("Professores:");
+            for (Professor professor : Professor.getAll()) {
+                System.out.println(professor.getId());
+            }
+        } else {
             System.out.println("Nao ha professores no momento");
         }
     }
@@ -53,5 +56,3 @@ public class Secretario extends Usuario{
         Secretario.secretarios = secretarios;
     }
 }
-    
-    
