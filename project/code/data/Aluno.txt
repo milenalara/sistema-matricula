@@ -1,3 +1,0 @@
-Gustavo redes-de-computadores	projeto-de-software	redes-de-computadores	filosofia
-Milena	projeto-de-software	laboratorio-projeto-de-software	redes-de-computadores	calculo-2
-Pedro	calculo-2	projeto-de-software	redes-de-computadores	aplicacao-para-projetos-de-sustentabilidade
