@@ -1,8 +1,36 @@
+
+import java.util.List;
+
 public class Professor extends Usuario{
+
+    private static List<Professor> professores;
     
+    public static Professor getById(String identifier) {
+
+        for (Professor componente : Professor.professores) {
+            if (componente != null) {
+                if (identifier == componente.getId()) {
+                    return componente;
+                };
+            }
+        }
+        System.out.println("Componente " + identifier + " nao encontrado");
+        return null;
+    }
+    
+    public static List<Professor> getAll(){
+        return professores;
+    }
+    
+    public static void addToList(Professor professor){
+        professores.add(professor);
+    }
     public Professor(String login, String senha) {
         super(login, senha);
-        Professor.addToList(this);
+    }
+
+    public Professor(){
+        super();
     }
 
     public void consultarMatriculas(Turma turma){
@@ -17,6 +45,10 @@ public class Professor extends Usuario{
                 System.out.println(aluno.getLogin());
             }
         }
+    }
+
+    public static void setAll(List<Professor> professores) {
+        Professor.professores = professores;
     }
 
 }

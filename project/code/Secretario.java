@@ -1,4 +1,30 @@
+import java.util.List;
+
 public class Secretario extends Usuario{
+
+    private static List<Secretario> secretarios;
+
+    public static Secretario getById(String identifier) {
+
+        for (Secretario componente : Secretario.secretarios) {
+            if (componente != null) {
+                if (identifier == componente.getId()) {
+                    return componente;
+                };
+            }
+        }
+        System.out.println("Componente " + identifier + " nao encontrado");
+        return null;
+    }
+    
+    
+    public static void addToList(Secretario secretario){
+        secretarios.add(secretario);
+    }
+
+    public static List<Secretario> getAll(){
+        return secretarios;
+    }
     
     public Secretario(String login, String senha) {
         super(login, senha);
@@ -6,23 +32,26 @@ public class Secretario extends Usuario{
     }
 
     public static void gerarCurriculo(){
-        System.out.println("Cursos:");
-        for (Componente curso : Curso.getAll()) {
+        if(!Curso.getAll().isEmpty()){
+            System.out.println("Cursos:");
+        for (Curso curso : Curso.getAll()) {
             System.out.println(curso.toString());
+        }}else{
+            System.out.println("Nao ha cursos no momento");
         }
 
+        if(!Professor.getAll().isEmpty()){
         System.out.println("Professores:");
-        for (Componente professor : Professor.getAll()) {
-            System.out.println(professor.toString());
+        for (Professor professor : Professor.getAll()) {
+            System.out.println(professor.getId());
+        }}else{
+            System.out.println("Nao ha professores no momento");
         }
     }
 
-    public static String gerarInformacoes(Object object){
-        return object.toString(); //todo:Rever funçao 
+    public static void setAll(List<Secretario> secretarios) {
+        Secretario.secretarios = secretarios;
     }
-
-
-
 }
     
     

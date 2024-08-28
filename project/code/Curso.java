@@ -1,7 +1,33 @@
-public class Curso extends Componente{
+
+import java.util.List;
+
+public class Curso{
     private String nome;
     private int creditos;
     private Disciplina[] disciplinas;
+
+    private static List<Curso> cursos;
+    
+    public static void addToList(Curso curso){
+        cursos.add(curso);
+    }
+
+    public static List<Curso> getAll(){
+        return cursos;
+    }
+    public static Curso getById(String identifier) {
+
+        for (Curso curso : Curso.cursos) {
+            if (curso != null) {
+                if (identifier == curso.getId()) {
+                    return curso;
+                };
+            }
+        }
+        System.out.println("Componente " + identifier + " nao encontrado");
+        return null;
+    }
+   
 
     public Curso(String nome, int creditos, Disciplina[] disciplinas){
         super();
@@ -23,7 +49,6 @@ public class Curso extends Componente{
         return infos;
     }
 
-    @Override
     public String getId() {
         return nome;
     }
@@ -45,6 +70,10 @@ public class Curso extends Componente{
     }
     public void setDisciplinas(Disciplina[] disciplinas) {
         this.disciplinas = disciplinas;
+    }
+
+    public static void setAll(List<Curso> cursos) {
+        Curso.cursos = cursos;
     }
     
 

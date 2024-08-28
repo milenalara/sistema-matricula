@@ -1,13 +1,36 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.List;
 
-public class Disciplina extends Componente{
+public class Disciplina{
     private String nome;
     private Boolean ativa;
     private Boolean isMatriculasAbertas;
 
+    private static List<Disciplina> disciplinas;
     
+    public static void addToList(Disciplina disciplina){
+        disciplinas.add(disciplina);
+    }
+
+    public static List<Disciplina> getAll(){
+        return disciplinas;
+    }
+   
+
+    public static Disciplina getById(String identifier) {
+
+        for (Disciplina componente : Disciplina.disciplinas) {
+            if (componente != null) {
+                if (identifier == componente.getId()) {
+                    return componente;
+                };
+            }
+        }
+        System.out.println("Componente " + identifier + " nao encontrado");
+        return null;
+    }
 
     public Disciplina(String nome, Boolean ativa, Boolean isMatriculasAbertas) {
         super();
@@ -17,7 +40,6 @@ public class Disciplina extends Componente{
         Disciplina.addToList(this);
     }
 
-    @Override
     public String getId() {
         return nome;
     }
@@ -68,6 +90,10 @@ public class Disciplina extends Componente{
     @Override
     public String toString() {
         return "Nome: " + nome + "Ativa: "+ ativa + "Matriculas Abertas: " + isMatriculasAbertas; 
+    }
+
+    public static void setAll(List<Disciplina> disciplinas) {
+        Disciplina.disciplinas = disciplinas;
     }
 
 

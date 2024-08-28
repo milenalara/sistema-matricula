@@ -1,7 +1,31 @@
+import java.util.List;
 
-public class Turma extends Componente{
+public class Turma{
+
+    private static List<Turma> turmas;
+
+    public static Turma getById(String identifier) {
+
+        for (Turma componente : Turma.turmas) {
+            if (componente != null) {
+                if (identifier == componente.getId()) {
+                    return componente;
+                };
+            }
+        }
+        System.out.println("Componente " + identifier + " nao encontrado");
+        return null;
+    }
     
+    public static void addToList(Turma turma){
+        turmas.add(turma);
+    }
 
+    public static List<Turma> getAll(){
+        return turmas;
+    }
+    
+    private String name;
     private Aluno[] alunos;
     private Professor professor;
     private Disciplina disciplina;
@@ -42,6 +66,27 @@ public class Turma extends Componente{
         }
         return info;
     }
+
+    public static void setAll(List<Turma> turmas) {
+        Turma.turmas = turmas;
+    }
+
+    public static List<Turma> getTurmas() {
+        return turmas;
+    }
+
+    public static void setTurmas(List<Turma> turmas) {
+        Turma.turmas = turmas;
+    }
+
+    public String getId() {
+        return name;
+    }
+
+    public void setId(String name) {
+        this.name = name;
+    }
+
 
     
 

@@ -9,7 +9,6 @@ public class Loader {
         Professor.setAll(GerenciadorDeArquivos.lerArquivoDaClasse(Professor.class));
         Secretario.setAll(GerenciadorDeArquivos.lerArquivoDaClasse(Secretario.class));
         Turma.setAll(GerenciadorDeArquivos.lerArquivoDaClasse(Turma.class));
-        Componente.setAll(GerenciadorDeArquivos.lerArquivoDaClasse(Componente.class));
     }
 
     public static void close() {
@@ -19,7 +18,6 @@ public class Loader {
         GerenciadorDeArquivos.salvarAll(Professor.getAll());
         GerenciadorDeArquivos.salvarAll(Secretario.getAll());
         GerenciadorDeArquivos.salvarAll(Turma.getAll());
-        GerenciadorDeArquivos.salvarAll(Componente.getAll());
     };
 
 }

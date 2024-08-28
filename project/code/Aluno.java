@@ -4,10 +4,37 @@ import java.io.IOException;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Aluno extends Usuario{
     private Disciplina[] disciplinas;
 
+    private static List<Aluno> alunos;
+    
+    public static void addToList(Aluno aluno){
+        alunos.add(aluno);
+    }
+
+    public static List<Aluno> getAll(){
+        return alunos;
+    }
+
+    public static Aluno getById(String identifier) {
+
+        for (Aluno componente : Aluno.alunos) {
+            if (componente != null) {
+                if (identifier == componente.getId()) {
+                    return componente;
+                };
+            }
+        }
+        System.out.println("Componente " + identifier + " nao encontrado");
+        return null;
+    }
+
+    
+   
     public void lerMatriculas() throws FileNotFoundException{
 
         Scanner scan = new Scanner(new File("project/code/Matriculas.txt"));
@@ -74,6 +101,10 @@ public class Aluno extends Usuario{
     public Aluno(String login, String senha){
         super(login, senha);
         Aluno.addToList(this);
+    }
+
+    public static void setAll(List<Aluno> alunos) {
+        Aluno.alunos = alunos;
     }
     
 }

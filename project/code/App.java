@@ -1,10 +1,12 @@
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class App {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, IllegalArgumentException, IllegalAccessException,
+            InstantiationException, InvocationTargetException, NoSuchMethodException, SecurityException {
 
         Loader.init();
 
@@ -37,7 +39,8 @@ public class App {
 
     }
 
-    public static void caseSecretario(Scanner scan) {
+    public static void caseSecretario(Scanner scan) throws IllegalArgumentException, IllegalAccessException,
+            InstantiationException, InvocationTargetException, NoSuchMethodException, SecurityException {
         System.out.println(
                 "Bem vindo ao portal do secretario\nO que deseja fazer?\n1)Gerar currículo\n2)Gerenciar informações");
 
@@ -55,10 +58,10 @@ public class App {
                         caseCriarRegistro(scan);
                         break;
                     case "2":
-                        Secretario.gerarInformacoes(Componente.getById(scan.nextLine()));
+                        System.out.println(Componente.getById(scan.nextLine())); //TODO));
                         break;
                     default:
-                    System.out.println("opcao invalida");
+                        System.out.println("opcao invalida");
                         break;
                 }
 
@@ -74,7 +77,7 @@ public class App {
     public static void caseProfessor(Scanner scan) {
         System.out.println(
                 "Bem vindo ao portal do professor\nDigite o ID de uma turma para consultar suas matriculas");
-        System.out.println(Turma.getById(scan.nextLine()).toString());
+        System.out.println(Turma.getById(scan.nextLine()));
     }
 
     public static void caseAluno(Scanner scan) {
@@ -82,7 +85,8 @@ public class App {
         // to-do: Classe aluno
     }
 
-    public static void caseCriarRegistro(Scanner scan) {
+    public static void caseCriarRegistro(Scanner scan) throws IllegalArgumentException, IllegalAccessException,
+            InstantiationException, InvocationTargetException, NoSuchMethodException, SecurityException {
         System.out
                 .println("O que deseja registrar?\n1)Aluno\n2)Curso\n3)Disciplina\n4)Professor\n5)Secretario\n6)Turma");
 
@@ -115,10 +119,8 @@ public class App {
                 new Disciplina(nomeDisc, ativa, matrAbertas);
                 break;
             case "4":
-                System.out.println("Digite, em ordem, o login e senha");
-                String loginP = scan.nextLine();
-                String senhaP = scan.nextLine();
-                new Professor(loginP, senhaP);
+                Usuario u = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                Professor.addToList(new Professor(u.getLogin(), u.getSenha()));
                 break;
             case "5":
                 System.out.println("Digite, em ordem, o login e senha");
