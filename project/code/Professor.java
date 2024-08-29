@@ -10,7 +10,7 @@ public class Professor extends Usuario{
 
         for (Professor componente : Professor.professores) {
             if (componente != null) {
-                if (identifier == componente.getId()) {
+                if (componente.getId().equals(identifier)) {
                     return componente;
                 };
             }

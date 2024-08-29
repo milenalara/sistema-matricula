@@ -19,7 +19,7 @@ public class Curso implements Serializable{
 
         for (Curso curso : Curso.cursos) {
             if (curso != null) {
-                if (identifier == curso.getId()) {
+                if (curso.getId().equals(identifier)) {
                     return curso;
                 };
             }

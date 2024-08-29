@@ -24,7 +24,7 @@ public class Disciplina implements Serializable{
 
         for (Disciplina componente : Disciplina.disciplinas) {
             if (componente != null) {
-                if (identifier == componente.getId()) {
+                if (componente.getId().equals(identifier)) {
                     return componente;
                 };
             }
