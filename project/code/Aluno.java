@@ -15,7 +15,6 @@ public class Aluno extends Usuario {
     }
 
     public static Aluno getById(String identifier) {
-
         for (Aluno componente : Aluno.alunos) {
             if (componente != null) {
                 if (componente.getId().equals(identifier)) {

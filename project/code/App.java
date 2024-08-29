@@ -94,7 +94,7 @@ public class App {
     }
 
     public static void caseAluno(Scanner scan) {
-        System.out.println("Bem vindo ao portal do aluno\nO que deseja fazer?\n1)DEBUG\n2)DEBUG");
+        System.out.println("Bem vindo ao portal do aluno\nO que deseja fazer?\n1)MATRICULAR-SE EM DISCIPLINA\n2)CANCELAR MATRICULA DISCIPLINA");
         // to-do: Classe aluno
     }
 
