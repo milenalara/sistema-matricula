@@ -4,21 +4,22 @@ import java.util.Scanner;
 import java.util.List;
 import java.io.Serializable;
 
-public class Disciplina implements Serializable{
+public class Disciplina implements Serializable {
     private String nome;
     private Boolean ativa;
     private Boolean isMatriculasAbertas;
-
     private static List<Disciplina> disciplinas;
-    
-    public static void addToList(Disciplina disciplina){
+
+    public Disciplina() {
+    }
+
+    public static void addToList(Disciplina disciplina) {
         disciplinas.add(disciplina);
     }
 
-    public static List<Disciplina> getAll(){
+    public static List<Disciplina> getAll() {
         return disciplinas;
     }
-   
 
     public static Disciplina getById(String identifier) {
 
@@ -26,7 +27,8 @@ public class Disciplina implements Serializable{
             if (componente != null) {
                 if (componente.getId().equals(identifier)) {
                     return componente;
-                };
+                }
+                ;
             }
         }
         System.out.println("Componente " + identifier + " nao encontrado");
@@ -45,11 +47,11 @@ public class Disciplina implements Serializable{
         return nome;
     }
 
-    public void lerArquivo() throws FileNotFoundException{
+    public void lerArquivo() throws FileNotFoundException {
 
         Scanner scan = new Scanner(new File("project/code/Disciplinas.txt"));
 
-        while(scan.hasNextLine()){
+        while (scan.hasNextLine()) {
 
             String[] line = scan.nextLine().split("\t");
 
@@ -58,19 +60,18 @@ public class Disciplina implements Serializable{
             this.ativa = Boolean.valueOf(line[1]);
 
             this.isMatriculasAbertas = Boolean.valueOf(line[2]);
-            
+
         }
         scan.close();
     }
-    
 
     public Boolean getAtiva() {
         return ativa;
     }
+
     public void setAtiva(Boolean ativa) {
         this.ativa = ativa;
     }
-    
 
     public void setNome(String nome) {
         this.nome = nome;
@@ -90,13 +91,10 @@ public class Disciplina implements Serializable{
 
     @Override
     public String toString() {
-        return "Nome: " + nome + "Ativa: "+ ativa + "Matriculas Abertas: " + isMatriculasAbertas; 
+        return "Nome: " + nome + "Ativa: " + ativa + "Matriculas Abertas: " + isMatriculasAbertas;
     }
 
     public static void setAll(List<Disciplina> disciplinas) {
         Disciplina.disciplinas = disciplinas;
     }
-
-
-    
 }
