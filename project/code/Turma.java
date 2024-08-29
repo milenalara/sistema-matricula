@@ -18,10 +18,9 @@ public class Turma implements Serializable {
 
         for (Turma componente : Turma.turmas) {
             if (componente != null) {
-                if (identifier == componente.getId()) {
+                if (identifier.equals(componente.getId())) {
                     return componente;
-                }
-                ;
+                };
             }
         }
         System.out.println("Componente " + identifier + " nao encontrado");
@@ -60,7 +59,7 @@ public class Turma implements Serializable {
     public String toString() {
         String info = "ID: " + this.getId() + "Professor: " + professorId + " Disciplina: " + disciplinaId + " Alunos:";
         for (String aluno : alunosIds) {
-            if (aluno != null) {
+            if (!(aluno==null)) {
                 info = info + " " + aluno;
             }
         }

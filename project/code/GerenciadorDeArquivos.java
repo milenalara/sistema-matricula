@@ -12,7 +12,7 @@ import java.util.List;
 public class GerenciadorDeArquivos {
 
     public static <T> void salvarAll(List<T> componenteAll) {
-        if (!componenteAll.isEmpty()) {
+        if (!(componenteAll==null)&&!componenteAll.isEmpty()) {
             try {
                 FileOutputStream fOutputStrem = new FileOutputStream(
                         new File("project/code/data/" + componenteAll.getFirst().getClass().getSimpleName() + ".txt"));

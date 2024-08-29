@@ -8,7 +8,7 @@ public class Secretario extends Usuario {
 
         for (Secretario componente : Secretario.secretarios) {
             if (componente != null) {
-                if (identifier == componente.getId()) {
+                if (identifier.equals(componente.getId())) {
                     return componente;
                 }
                 ;

@@ -9,22 +9,29 @@ public class App {
 
         Loader.init();
 
-        System.out.println("Bem vindo ao sistema de matrículas!\nEntrar como: \n1)Aluno\n2)Professor\n3)Secretario");
+        System.out.println("Bem vindo ao sistema de matrículas!\nEntrar como: \n1)Aluno\n2)Professor\n3)Secretario\n4)Criar novo cadastro");
 
         Scanner scan = new Scanner(System.in);
 
         switch (scan.nextLine()) {
 
             case "1":
+                Cadastrador.fazerLoginAluno(scan);
                 caseAluno(scan);
                 break;
 
             case "2":
+                Cadastrador.fazerLoginProf(scan);
                 caseProfessor(scan);
                 break;
 
             case "3":
+                Cadastrador.fazerLoginSecretaria(scan);
                 caseSecretario(scan);
+                break;
+
+                case "4":
+                Cadastrador.fazerCadastro(scan);
                 break;
 
             default:
@@ -51,7 +58,7 @@ public class App {
 
             case "2":
                 System.out.println(
-                        "1)Criar um novo registro\n2)Acessar registros\n3)Deletar um registro\n4)Atualizar um registro\n5)Ver todos registros");
+                        "1)Criar um novo registro\n2)Acessar registros\n3)Deletar um registro\n4)Atualizar um registro");
                 switch (scan.nextLine()) {
                     case "1":
                         caseCriarRegistro(scan);
@@ -80,7 +87,7 @@ public class App {
     public static void caseProfessor(Scanner scan) {
         System.out.println(
                 "Bem vindo ao portal do professor\nDigite o ID de uma turma para consultar suas matriculas");
-        System.out.println(Turma.getById(scan.nextLine()));
+        Professor.consultarMatriculas(Turma.getById(scan.nextLine()));
     }
 
     public static void caseAluno(Scanner scan) {
@@ -147,7 +154,8 @@ public class App {
 
         if (lista != null && !lista.isEmpty()) {
             for (T t : lista) {
-                System.out.println(t);
+                if(t!=null){
+                System.out.println(t);}
             }
         } else {
             System.out.println("Nao ha registros");
@@ -168,16 +176,16 @@ public class App {
                     Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
                     break;
                 case "2":
-                Curso.addToList((Curso) Creater.createComponentManual(Curso.class, scan));
+                    Curso.addToList((Curso) Creater.createComponentManual(Curso.class, scan));
                     Curso.getAll().remove(Curso.getById(id));
                     break;
                 case "3":
-                Disciplina.addToList((Disciplina) Creater.createComponentManual(Disciplina.class, scan));
+                    Disciplina.addToList((Disciplina) Creater.createComponentManual(Disciplina.class, scan));
                     Disciplina.getAll().remove(Disciplina.getById(id));
                     break;
                 case "4":
-                Usuario u4 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
-                Professor.addToList(new Professor(u4.getLogin(), u4.getSenha()));
+                    Usuario u4 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                    Professor.addToList(new Professor(u4.getLogin(), u4.getSenha()));
                     Professor.getAll().remove(Professor.getById(id));
                     break;
                 case "5":
@@ -238,5 +246,5 @@ public class App {
         }
 
     }
-    
-    }
+
+}

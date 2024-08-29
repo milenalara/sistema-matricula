@@ -1,5 +1,6 @@
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class Professor extends Usuario{
 
@@ -22,7 +23,11 @@ public class Professor extends Usuario{
         return professores;
     }
     
+    @SuppressWarnings({ "rawtypes", "unchecked" })
     public static void addToList(Professor professor){
+        if(professores == null){
+            professores = new ArrayList();
+        }
         professores.add(professor);
     }
     public Professor(String login, String senha) {
@@ -33,17 +38,23 @@ public class Professor extends Usuario{
         super();
     }
 
-    public void consultarMatriculas(Turma turma){
-        String[] alunos = turma.getAlunosIds();
-
-        if(alunos.length <= 0){
-            System.out.println("Não possui alunos matriculados nessa diciplina");
-        }else{
-            System.out.println("Alunos matriculados na turma da diciplina: " + turma.getDisciplinaId() + ": ");
-
-            for(String aluno : alunos){
-                System.out.println(aluno);
+    public static void consultarMatriculas(Turma turma){
+        try {
+            
+            String[] alunos = turma.getAlunosIds();
+            
+            if(alunos.length <= 0){
+                System.out.println("Não possui alunos matriculados nessa diciplina");
+            }else{
+                System.out.println("Alunos matriculados na turma da diciplina " + turma.getId() + ": ");
+                
+                for(String aluno : alunos){
+                    if(aluno!=null){
+                    System.out.println(aluno);}
+                }
             }
+        } catch (Exception e) {
+            System.out.println("Nao foi possivel consultar matriculas");
         }
     }
 
