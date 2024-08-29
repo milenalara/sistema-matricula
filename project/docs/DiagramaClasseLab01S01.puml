@@ -8,18 +8,20 @@ class Usuario{
     -String senha
 }
 
-class Secretaria{
+class Secretario{
+    -Secretario List<secretarios>
+    +void addToList(Secretario secretario)
     +void gerarCurriculo()
-    +void gerarInformacoes(Object object)
 }
 
 
 class Professor{
+    -Professor List<professores>
     +void consultarMatriculas(Turma turma)
 }
 
 class Aluno{
-    -Disciplina[4] disciplinas
+    -String[4] disciplinas
     +void matricularEmDisciplina(Disciplina disciplina)
     +void cancelarDisciplina(Disciplina disciplina)
     +void pagarDisciplina(Disciplina disciplina)
@@ -28,23 +30,24 @@ class Aluno{
 class Curso{
     -String nome
     -Int creditos
-    -Disciplina[] disciplinas
+    -String[] disciplinasIds
 }
 
 class Disciplina{
     -String nome
     -Boolean ativa
-    -Boolean matriculasAbertas
-    -Int cargaHoraria
-    -Int numCreditos 
+    -Boolean isMatriculasAbertas
 }
 
 class Turma{
-    -Aluno[60] alunos
-    -Professor professor
+    -String name
+    -String[1000] alunosIds
+    -String professorId
+    -String dusciplinaId
+    -Turma List<turmas>
 }
 
-Usuario <|-- Secretaria
+Usuario <|-- Secretario
 
 Usuario <|-- Professor
 
