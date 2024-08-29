@@ -3,6 +3,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Scanner;
 
+//DUVIDA PARA LAB: SEPARAR AS LISTAS EM LISTAS GENERICAS, COMO NA ANTIGA CLASSE COMPONENTES
+
+
 public class App {
     public static void main(String[] args) throws IOException, IllegalArgumentException, IllegalAccessException,
             InstantiationException, InvocationTargetException, NoSuchMethodException, SecurityException {
@@ -102,25 +105,25 @@ public class App {
 
         switch (scan.nextLine()) {
             case "1":
-                Usuario u1 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                Usuario u1 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
                 Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
                 break;
             case "2":
-                Curso.addToList((Curso) Creater.createComponentManual(Curso.class, scan));
+                Curso.addToList((Curso) CriadorDeComponentes.createComponentManual(Curso.class, scan));
                 break;
             case "3":
-                Disciplina.addToList((Disciplina) Creater.createComponentManual(Disciplina.class, scan));
+                Disciplina.addToList((Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan));
                 break;
             case "4":
-                Usuario u4 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                Usuario u4 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
                 Professor.addToList(new Professor(u4.getLogin(), u4.getSenha()));
                 break;
             case "5":
-                Usuario u5 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                Usuario u5 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
                 Secretario.addToList(new Secretario(u5.getLogin(), u5.getSenha()));
                 break;
             case "6":
-                Turma.addToList((Turma) Creater.createComponentManual(Turma.class, scan));
+                Turma.addToList((Turma) CriadorDeComponentes.createComponentManual(Turma.class, scan));
                 break;
             default:
                 System.out.println("Favor selecionar uma opção válida");
@@ -172,30 +175,30 @@ public class App {
             switch (opt) {
                 case "1":
                     Aluno.getAll().remove(Aluno.getById(id));
-                    Usuario u1 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                    Usuario u1 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
                     Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
                     break;
                 case "2":
-                    Curso.addToList((Curso) Creater.createComponentManual(Curso.class, scan));
+                    Curso.addToList((Curso) CriadorDeComponentes.createComponentManual(Curso.class, scan));
                     Curso.getAll().remove(Curso.getById(id));
                     break;
                 case "3":
-                    Disciplina.addToList((Disciplina) Creater.createComponentManual(Disciplina.class, scan));
+                    Disciplina.addToList((Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan));
                     Disciplina.getAll().remove(Disciplina.getById(id));
                     break;
                 case "4":
-                    Usuario u4 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                    Usuario u4 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
                     Professor.addToList(new Professor(u4.getLogin(), u4.getSenha()));
                     Professor.getAll().remove(Professor.getById(id));
                     break;
                 case "5":
                     Secretario.getAll().remove(Secretario.getById(id));
-                    Usuario u5 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                    Usuario u5 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
                     Secretario.addToList(new Secretario(u5.getLogin(), u5.getSenha()));
                     break;
                 case "6":
                     Turma.getAll().remove(Turma.getById(id));
-                    Turma.addToList((Turma) Creater.createComponentManual(Turma.class, scan));
+                    Turma.addToList((Turma) CriadorDeComponentes.createComponentManual(Turma.class, scan));
                     break;
 
                 default:

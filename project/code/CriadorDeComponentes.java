@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.util.Scanner;
 import java.util.ArrayList;
 
-public class Creater {
+public class CriadorDeComponentes {
 
     @SuppressWarnings("rawtypes")
     public static Object createComponentManual(Class<?> classe, Scanner scan)
@@ -31,7 +31,7 @@ public class Creater {
 
             } else {
                 if (field.getType().isInstance(new ArrayList())) {
-                    // Skip
+                    
                 } else {
                     System.out.println("Digite o " + field.getName());
                     if (field.getType() == String.class) {

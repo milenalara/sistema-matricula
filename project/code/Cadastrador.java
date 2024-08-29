@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Cadastrador {
 
-    public static void fazerLoginAluno(Scanner scan) {
+    public static void fazerLoginAluno(Scanner scan) { 
         System.out.println("Digite seu nome:");
 
         String nome = scan.nextLine();
@@ -80,17 +80,17 @@ public class Cadastrador {
         try{
         switch (scan.nextLine()) {
             case "1":
-                Usuario u1 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+                Usuario u1 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
                 Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
                 break;
             case "2":
 
-            Usuario u2 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+            Usuario u2 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
             Professor.addToList(new Professor(u2.getLogin(), u2.getSenha()));
                 break;
             case "3":
 
-            Usuario u3 = (Usuario) Creater.createComponentManual(Usuario.class, scan);
+            Usuario u3 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
             Secretario.addToList(new Secretario(u3.getLogin(), u3.getSenha()));
                 break;
         }
