@@ -22,8 +22,9 @@ class Professor{
 
 class Aluno{
     -String[4] disciplinas
+    -Diciplina List<diciplinas>
     +void matricularEmDisciplina(Disciplina disciplina)
-    +void cancelarDisciplina(Disciplina disciplina)
+    +void cancelarMatriculaDisciplina(Disciplina disciplina)
     +void pagarDisciplina(Disciplina disciplina)
 }
 
@@ -37,6 +38,7 @@ class Disciplina{
     -String nome
     -Boolean ativa
     -Boolean isMatriculasAbertas
+    -Disciplina List<disciplinas>
 }
 
 class Turma{
