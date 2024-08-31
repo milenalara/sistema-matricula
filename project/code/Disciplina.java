@@ -22,7 +22,6 @@ public class Disciplina implements Serializable {
     }
 
     public static Disciplina getById(String identifier) {
-
         for (Disciplina componente : Disciplina.disciplinas) {
             if (componente != null) {
                 if (componente.getId().equals(identifier)) {
