@@ -112,7 +112,9 @@ public class App {
                 Curso.addToList((Curso) CriadorDeComponentes.createComponentManual(Curso.class, scan));
                 break;
             case "3":
-                Disciplina.addToList((Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan));
+                Disciplina d1 = (Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan);
+                Disciplina.addToList(d1);
+                // Disciplina.addToList((Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan));
                 break;
             case "4":
                 Usuario u4 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);

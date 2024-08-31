@@ -1,60 +1,74 @@
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Aluno extends Usuario {
     private static List<Aluno> alunos;
-
-    private List<Turma> turmas = new ArrayList<>();
-
-    public static void addToList(Aluno aluno) {
-        alunos.add(aluno);
-    }
-
-    public static List<Aluno> getAll() {
-        return alunos;
-    }
+    private List<Disciplina> disciplinas;
 
     public static Aluno getById(String identifier) {
         for (Aluno componente : Aluno.alunos) {
             if (componente != null) {
                 if (componente.getId().equals(identifier)) {
                     return componente;
-                }
-                ;
+                };
             }
         }
         System.out.println("Componente " + identifier + " nao encontrado");
         return null;
     }
 
-    public Boolean matricularEmTurma(Turma turma) {
-        if (turmas.size() >= 6) {
+    public static List<Aluno> getAll() {
+        return alunos;
+    }
+
+    @SuppressWarnings({ "rawtypes", "unchecked" })
+    public static void addToList(Aluno aluno) {
+        if(alunos == null){
+            alunos = new ArrayList();
+        }
+        alunos.add(aluno);
+    }
+
+    public Aluno(String login, String senha, List<Disciplina> disciplinas) {
+        super(login, senha);
+        Aluno.addToList(this);
+        this.disciplinas = disciplinas;
+    }
+
+    public Aluno(String login, String senha) {
+        super(login, senha);
+        Aluno.addToList(this);
+        disciplinas = new ArrayList<>();
+    }
+
+    public Boolean matricularEmDisciplina(Disciplina disciplina) {
+        if (disciplinas.size() >= 6) {
             System.out.println("Número máximo de disciplinas excedido.");
             return false;
         }
-        for (Turma t : turmas) {
-            if (turma.getDisciplinaId().equals(t.getDisciplinaId())) {
+        for (Disciplina d : disciplinas) {
+            if (disciplina.getNome().equals(d.getNome())) {
                 System.out.println("Aluno já matriculado na disciplina.");
                 return false;
             }
         }
-        turmas.add(turma);
+        disciplinas.add(disciplina);
         return true;
     }
 
-    public Boolean cancelarMatriculaTurma(Turma turma) {
+    public Boolean cancelarMatriculaDisciplina(Disciplina disciplina) {
         Boolean isMatriculado = false;
-        if (turmas.size() <= 4) {
+        if (disciplinas.size() <= 4) {
             System.out.println("Número mínimo de disciplinas matriculadas é 4.");
             return false;
         }
-        for (Turma t : turmas) {
-            if (turma.getId().equals(t.getId())) {
+        for (Disciplina d : disciplinas) {
+            if (disciplina.getId().equals(d.getId())) {
                 isMatriculado = true;
             }
         }
         if (isMatriculado) {
-            turmas.remove(turma);
+            disciplinas.remove(disciplina);
             return true;
         }
         System.out.println("Aluno não está matriculado na turma.");
@@ -65,12 +79,12 @@ public class Aluno extends Usuario {
 
     }
 
-    public List<Turma> getTurmas() {
-        return turmas;
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
     }
 
-    public void setTurmas(List<Turma> turmas) {
-        this.turmas = turmas;
+    public void setDisciplinas(List<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
     }
 
     @Override
@@ -80,21 +94,18 @@ public class Aluno extends Usuario {
                 "Senha: " + this.getSenha() +
                 "Disciplinas em estudo: ";
 
-        for (Turma turma : turmas) {
-            infos = infos + " " + Disciplina.getById(turma.getDisciplinaId()).getNome();
+        for (Disciplina disciplina : disciplinas) {
+            infos = infos + " " + Disciplina.getById(disciplina.getId()).getNome();
         }
 
         return infos;
 
     }
 
-    public Aluno(String login, String senha) {
-        super(login, senha);
-        Aluno.addToList(this);
-    }
-
     public static void setAll(List<Aluno> alunos) {
         Aluno.alunos = alunos;
     }
+
+
 
 }
