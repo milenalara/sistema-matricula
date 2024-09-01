@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Cadastrador {
 
-    public static void fazerLoginAluno(Scanner scan) { 
+    public static String fazerLoginAluno(Scanner scan) { 
         System.out.println("Digite seu nome:");
 
         String nome = scan.nextLine();
@@ -24,6 +24,7 @@ public class Cadastrador {
         }
 
         System.out.println("Bem vindo, "+nome);
+        return nome;
     }
 
     public static void fazerLoginProf(Scanner scan) {

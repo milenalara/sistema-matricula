@@ -5,22 +5,22 @@ import java.util.Scanner;
 
 //DUVIDA PARA LAB: SEPARAR AS LISTAS EM LISTAS GENERICAS, COMO NA ANTIGA CLASSE COMPONENTES
 
-
 public class App {
     public static void main(String[] args) throws IOException, IllegalArgumentException, IllegalAccessException,
             InstantiationException, InvocationTargetException, NoSuchMethodException, SecurityException {
 
         Loader.init();
 
-        System.out.println("Bem vindo ao sistema de matrículas!\nEntrar como: \n1)Aluno\n2)Professor\n3)Secretario\n4)Criar novo cadastro");
+        System.out.println(
+                "Bem vindo ao sistema de matrículas!\nEntrar como: \n1)Aluno\n2)Professor\n3)Secretario\n4)Criar novo cadastro");
 
         Scanner scan = new Scanner(System.in);
 
         switch (scan.nextLine()) {
 
             case "1":
-                Cadastrador.fazerLoginAluno(scan);
-                caseAluno(scan);
+                String nome = Cadastrador.fazerLoginAluno(scan);
+                caseAluno(scan, nome);
                 break;
 
             case "2":
@@ -33,7 +33,7 @@ public class App {
                 caseSecretario(scan);
                 break;
 
-                case "4":
+            case "4":
                 Cadastrador.fazerCadastro(scan);
                 break;
 
@@ -93,9 +93,53 @@ public class App {
         Professor.consultarMatriculas(Turma.getById(scan.nextLine()));
     }
 
-    public static void caseAluno(Scanner scan) {
-        System.out.println("Bem vindo ao portal do aluno\nO que deseja fazer?\n1)MATRICULAR-SE EM DISCIPLINA\n2)CANCELAR MATRICULA DISCIPLINA");
-        // to-do: Classe aluno
+    public static void caseAluno(Scanner scan, String nome) {
+        System.out.println("Bem vindo ao portal do aluno");
+
+        Aluno aluno = Aluno.getById(nome);
+        String op;
+
+        do {
+            System.out.println("O que deseja fazer?");
+            System.out.println("1)Matricular-se em disciplina");
+            System.out.println("2)Cancelar matrícula em disciplina");
+            System.out.println("3)Visualizar disciplinas matriculadas");
+            System.out.println("4) Realizar pagamento da mensalidade");
+            System.out.println("0)Encerrar o programa");
+
+            op = scan.nextLine();
+            switch (op) {
+                case "1":
+                    System.out.println("Informe o nome da disciplina: ");
+
+                    Disciplina disciplina = Disciplina.getById(scan.nextLine());
+                    if (disciplina == null) {
+                        return;
+                    }
+                    aluno.matricularEmDisciplina(disciplina);
+                    break;
+                case "2":
+                    System.out.println("Informe o nome da disciplina: ");
+                    String nomeDisciplina = scan.nextLine();
+                    disciplina = Disciplina.getById(nomeDisciplina);
+                    if (disciplina == null) {
+                        return;
+                    }
+                    aluno.cancelarMatriculaDisciplina(disciplina);
+                    break;
+                case "3":
+                    aluno.visualizarDisciplinas();
+                    break;
+                case "4":
+                    aluno.pagarDisciplinas(scan);
+                    break;
+                default:
+                    System.out.println("\n=======================================\n");
+                    System.out.println("Opção inválida");
+                    System.out.println("\n=======================================\n");
+                    break;
+            }
+        } while (!op.equals("0"));
     }
 
     public static void caseCriarRegistro(Scanner scan) throws IllegalArgumentException, IllegalAccessException,
@@ -114,7 +158,8 @@ public class App {
             case "3":
                 Disciplina d1 = (Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan);
                 Disciplina.addToList(d1);
-                // Disciplina.addToList((Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan));
+                // Disciplina.addToList((Disciplina)
+                // CriadorDeComponentes.createComponentManual(Disciplina.class, scan));
                 break;
             case "4":
                 Usuario u4 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
@@ -159,8 +204,9 @@ public class App {
 
         if (lista != null && !lista.isEmpty()) {
             for (T t : lista) {
-                if(t!=null){
-                System.out.println(t);}
+                if (t != null) {
+                    System.out.println(t);
+                }
             }
         } else {
             System.out.println("Nao ha registros");
@@ -185,7 +231,8 @@ public class App {
                     Curso.getAll().remove(Curso.getById(id));
                     break;
                 case "3":
-                    Disciplina.addToList((Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan));
+                    Disciplina
+                            .addToList((Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan));
                     Disciplina.getAll().remove(Disciplina.getById(id));
                     break;
                 case "4":
