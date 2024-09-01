@@ -32,13 +32,11 @@ public class Aluno extends Usuario {
 
     public Aluno(String login, String senha, List<Disciplina> disciplinas) {
         super(login, senha);
-        Aluno.addToList(this);
         this.disciplinas = disciplinas;
     }
 
     public Aluno(String login, String senha) {
         super(login, senha);
-        Aluno.addToList(this);
         disciplinas = new ArrayList<>();
     }
 
@@ -145,8 +143,8 @@ public class Aluno extends Usuario {
     public String toString() {
 
         String infos = "Login: " + this.getLogin() +
-                "\tbSenha: " + this.getSenha() +
-                "\tbDisciplinas em estudo: ";
+                "\tSenha: " + this.getSenha() +
+                "\tDisciplinas em estudo: ";
 
         for (Disciplina disciplina : disciplinas) {
             infos = infos + " " + Disciplina.getById(disciplina.getId()).getNome();

@@ -13,7 +13,7 @@ public class App {
 
         System.out.println(
                 "Bem vindo ao sistema de matrículas!\nEntrar como: \n1)Aluno\n2)Professor\n3)Secretario\n4)Criar novo cadastro");
-
+                
         Scanner scan = new Scanner(System.in);
 
         switch (scan.nextLine()) {
@@ -53,6 +53,8 @@ public class App {
             System.out.println("O que deseja fazer?\n1)Gerar currículo\n2)Gerenciar informações\n0)Encerrar o programa");
             opc = scan.nextLine();
             switch (opc) {
+                case "0":
+                    break;
                 case "1":
                     Secretario.gerarCurriculo();
                     break;
