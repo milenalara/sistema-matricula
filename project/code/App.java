@@ -13,8 +13,9 @@ public class App {
 
         System.out.println(
                 "Bem vindo ao sistema de matrículas!\nEntrar como: \n1)Aluno\n2)Professor\n3)Secretario\n4)Criar novo cadastro");
-                
+
         Scanner scan = new Scanner(System.in);
+
 
         switch (scan.nextLine()) {
             case "1":
@@ -157,13 +158,12 @@ public class App {
                 Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
                 break;
             case "2":
-                Curso.addToList((Curso) CriadorDeComponentes.createComponentManual(Curso.class, scan));
+            Curso c1 = (Curso) CriadorDeComponentes.createComponentManual(Curso.class, scan);
+                Curso.addToList(c1);
                 break;
             case "3":
                 Disciplina d1 = (Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan);
                 Disciplina.addToList(d1);
-                // Disciplina.addToList((Disciplina)
-                // CriadorDeComponentes.createComponentManual(Disciplina.class, scan));
                 break;
             case "4":
                 Usuario u4 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
