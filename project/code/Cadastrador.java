@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Cadastrador {
 
-    public static String fazerLoginAluno(Scanner scan) { 
+    public static String fazerLoginAluno(Scanner scan) {
         System.out.println("Digite seu nome:");
 
         String nome = scan.nextLine();
@@ -23,7 +23,7 @@ public class Cadastrador {
             System.exit(0);
         }
 
-        System.out.println("Bem vindo, "+nome);
+        System.out.println("Bem vindo, " + nome);
         return nome;
     }
 
@@ -48,7 +48,7 @@ public class Cadastrador {
             System.exit(0);
         }
 
-        System.out.println("Bem vindo, "+nome);
+        System.out.println("Bem vindo, " + nome);
     }
 
     public static void fazerLoginSecretaria(Scanner scan) {
@@ -72,31 +72,37 @@ public class Cadastrador {
             System.exit(0);
         }
 
-        System.out.println("Bem vindo, "+nome);
+        System.out.println("Bem vindo, " + nome);
     }
 
     public static void fazerCadastro(Scanner scan) {
-        System.out.println(
-                "Qual é o tipo de registro?\n1)Aluno\n2)Professor\n3)Secretario");
-        try{
-        switch (scan.nextLine()) {
-            case "1":
-                Usuario u1 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
-                break;
-            case "2":
+        String op;
+        try {
+            do {
+                System.out
+                        .println("Qual é o tipo de registro?\n1)Aluno\n2)Professor\n3)Secretario\n0)Encerrar programa");
+                op = scan.nextLine();
+                switch (op) {
+                    case "0":
+                        break;
+                    case "1":
+                        Usuario u1 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
+                        Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
+                        break;
+                    case "2":
 
-            Usuario u2 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-            Professor.addToList(new Professor(u2.getLogin(), u2.getSenha()));
-                break;
-            case "3":
+                        Usuario u2 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
+                        Professor.addToList(new Professor(u2.getLogin(), u2.getSenha()));
+                        break;
+                    case "3":
 
-            Usuario u3 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-            Secretario.addToList(new Secretario(u3.getLogin(), u3.getSenha()));
-                break;
+                        Usuario u3 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
+                        Secretario.addToList(new Secretario(u3.getLogin(), u3.getSenha()));
+                        break;
+                }
+            } while (!op.equals("0"));
+        } catch (Exception e) {
+            System.err.println("Erro ao fazer cadastro:" + e);
         }
-    }catch(Exception e){
-        System.err.println("Erro ao fazer cadastro:"+e);
-    }
     }
 }
