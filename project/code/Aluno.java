@@ -65,6 +65,7 @@ public class Aluno extends Usuario {
         if (turma == null) {
             System.out.println("Criando nova turma");
             turma = new Turma(disciplina.getId());
+            Turma.addToList(turma);
         }
         turma.addAluno(this);
         disciplinas.add(disciplina);

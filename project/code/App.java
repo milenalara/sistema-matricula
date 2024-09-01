@@ -11,6 +11,10 @@ public class App {
 
         Loader.init();
 
+        for (Turma turma : Turma.getAll()) {
+            System.out.println(turma.getId());
+        }
+
         System.out.println(
                 "Bem vindo ao sistema de matrículas!\nEntrar como: \n1)Aluno\n2)Professor\n3)Secretario\n4)Criar novo cadastro");
 
@@ -123,6 +127,8 @@ public class App {
 
             op = scan.nextLine();
             switch (op) {
+                case "0":
+                    break;
                 case "1":
                     System.out.println("Informe o nome da disciplina: ");
 
@@ -228,7 +234,16 @@ public class App {
         verRegistros(Secretario.getAll());
 
         System.out.println("=========Turmas=========");
-        verRegistros(Turma.getAll());
+        List<Turma> turmas = Turma.getAll();
+        for (Turma turma : turmas) {
+            System.out.println(turma.getId());
+            System.out.println("\n\tProfessor:" + turma.getProfessorId());
+            System.out.println("\n\tDisciplina" + turma.getDisciplinaId());
+            System.out.println("\n\tAlunos:");
+            for (Aluno aluno : turma.getAlunos()) {
+                System.out.println("\n\t\t" + aluno.getLogin());
+            }
+        }
         System.out.println();
     }
 

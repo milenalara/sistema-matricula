@@ -3,7 +3,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Turma implements Serializable {
-    private Integer MAX_ALUNOS = 60;
+    private Integer MIN_ALUNOS = 3;
+    private Integer MAX_ALUNOS = 5;
     private String name;
     private List<Aluno> alunos;
     private String professorId;
@@ -11,18 +12,18 @@ public class Turma implements Serializable {
     private static List<Turma> turmas;
 
     public Turma() {
-        // Turma.addToList(this);
         this.name = generateId();
+        this.alunos = new ArrayList<>();
     }
-    
+
     public Turma(String disciplinaId) {
         this.disciplinaId = disciplinaId;
-        // Turma.addToList(this);
         this.name = generateId();
+        this.alunos = new ArrayList<>();
     }
 
     public String generateId() {
-        return "Turma " + turmas.indexOf(this);
+        return "Turma " + (turmas.indexOf(this) + 1);
     }
 
     public static Turma getById(String identifier) {
@@ -33,7 +34,8 @@ public class Turma implements Serializable {
             if (componente != null) {
                 if (identifier.equals(componente.getId())) {
                     return componente;
-                };
+                }
+                ;
             }
         }
         System.out.println("Turma " + identifier + " nao encontrada");
@@ -69,22 +71,24 @@ public class Turma implements Serializable {
     }
 
     public Boolean addAluno(Aluno aluno) {
-        if(alunos == null) {
-            alunos = new ArrayList<>();
-        }
-        if(alunos.size() >= 60) {
+        if (this.alunos.size() >= MAX_ALUNOS) {
             System.out.println("Limite de alunos por turma = " + MAX_ALUNOS + ". Favor criar turma nova");
             return false;
         }
         alunos.add(aluno);
+        if (this.alunos.size() >= MIN_ALUNOS) {
+            Disciplina.getById(this.disciplinaId).setAtiva(true);
+            ;
+        }
         return true;
     }
 
     @Override
     public String toString() {
-        String info = "ID: " + this.getId() + "\tProfessor: " + professorId + "\tDisciplina: " + disciplinaId + "\tAlunos:";
+        String info = "ID: " + this.getId() + "\tProfessor: " + professorId + "\tDisciplina: " + disciplinaId
+                + "\tAlunos:";
         for (Aluno aluno : alunos) {
-                info = info + "\n\t" + aluno.getLogin();
+            info = info + "\n\t" + aluno.getLogin();
         }
         return info;
     }
@@ -123,6 +127,13 @@ public class Turma implements Serializable {
 
     public void setDisciplinaId(String disciplinaId) {
         this.disciplinaId = disciplinaId;
+    }
+
+    public Boolean isTurmaCheia() {
+        if (this.alunos.size() >= MAX_ALUNOS) {
+            return true;
+        }
+        return false;
     }
 
 }

@@ -1,12 +1,18 @@
 =========Alunos========
 Login: Amanda   Senha: 1234     Disciplinas em estudo: 
-Login: Bernardo Senha: 9wXy8    Disciplinas em estudo: 
-Login: Carlos   Senha: jk3#f    Disciplinas em estudo: 
-Login: Daniel   Senha: G7Hp3    Disciplinas em estudo: 
-Login: Eduarda  Senha: LmnO4Z   Disciplinas em estudo: 
-Login: Fernanda Senha: 9Fs#67G  Disciplinas em estudo: 
-Login: Gabriel  Senha: 2Hx!y9   Disciplinas em estudo: 
-Login: Helena   Senha: sD3wQ1   Disciplinas em estudo: 
+        Psicologia do Desenvolvimento
+        Processos Psicológicos Básicos
+        Fundamentos de Psicologia
+        Psicologia da Personalidade
+        Teorias e Sistemas Psicológicos
+        Psicologia Social
+Login: Bernardo Senha: 1234     Disciplinas em estudo: 
+Login: Carlos   Senha: 1234     Disciplinas em estudo: 
+Login: Daniel   Senha: 1234     Disciplinas em estudo: 
+Login: Eduarda  Senha: 1234     Disciplinas em estudo: 
+Login: Fernanda Senha: 1234     Disciplinas em estudo: 
+Login: Gabriel  Senha: 1234     Disciplinas em estudo: 
+Login: Helena   Senha: 1234     Disciplinas em estudo: 
 Login: Isabela  Senha: 8uNvL4   Disciplinas em estudo: 
 Login: João     Senha: Rt5%2J   Disciplinas em estudo: 
 Login: Karla    Senha: q6Zx#1   Disciplinas em estudo: 
@@ -205,6 +211,46 @@ Engenharia de Software
                 Gestão de Projetos de Software  
                 Engenharia de Software em Ambientes Regulamentados
 
+Psicologia
+        Creditos: 2000
+        Disciplinas: 
+                Psicologia do Desenvolvimento
+                Processos Psicológicos Básicos
+                Fundamentos de Psicologia
+                Psicologia da Personalidade
+                Teorias e Sistemas Psicológicos
+                Psicologia Social
+                Métodos e Técnicas de Pesquisa em Psicologia
+                Psicopatologia
+                Psicologia Clínica
+                Psicologia Educacional
+                Psicologia Organizacional e do Trabalho
+                Psicologia Forense
+                Psicologia do Trabalho
+                Psicologia da Saúde
+                Avaliação Psicológica
+                Psicologia Cognitiva
+                Psicologia do Desenvolvimento Infantil
+                Psicologia do Desenvolvimento Adulta
+                Psicologia da Geriatria
+                Psicologia e Cultura
+                Intervenções Psicológicas
+                Psicologia Experimental
+                Psicologia da Educação
+                Ética e Legislação em Psicologia
+                Psicologia Social Comunitária
+                Psicologia e Políticas Públicas
+                Psicologia na Educação e Aprendizagem
+                Terapias Cognitivo-Comportamentais
+                Psicologia e Qualidade de Vida
+                Psicologia e Neurociências
+                Psicologia do Transtorno de Estresse Pós-Traumático
+                Psicologia e Saúde Mental
+                Psicologia e Tecnologias Digitais
+                Prática Profissional em Psicologia
+                Estágio Supervisionado em Psicologia
+                Trabalho de Conclusão de Curso (TCC)
+
 =======Disciplinas=======
 Nome: Algoritmos e Estruturas de Dados  Ativa: false    Matriculas Abertas: true
 Nome: Arquitetura de Software   Ativa: false    Matriculas Abertas: true
@@ -301,6 +347,41 @@ Nome: Técnicas de Construção Sustentável        Ativa: false    Matriculas A
 Nome: Projeto de Arquitetura VII        Ativa: false    Matriculas Abertas: true
 Nome: Fundamentos de Acústica Arquitetônica     Ativa: false    Matriculas Abertas: true
 Nome: Projeto Urbano Sustentável        Ativa: false    Matriculas Abertas: true
+Nome: Psicologia do Desenvolvimento     Ativa: false    Matriculas Abertas: true
+Nome: Processos Psicológicos Básicos    Ativa: false    Matriculas Abertas: true
+Nome: Fundamentos de Psicologia Ativa: false    Matriculas Abertas: true
+Nome: Psicologia da Personalidade       Ativa: false    Matriculas Abertas: true
+Nome: Teorias e Sistemas Psicológicos   Ativa: false    Matriculas Abertas: true
+Nome: Psicologia Social Ativa: false    Matriculas Abertas: true
+Nome: Métodos e Técnicas de Pesquisa em Psicologia      Ativa: false    Matriculas Abertas: true
+Nome: Psicopatologia    Ativa: false    Matriculas Abertas: true
+Nome: Psicologia Clínica        Ativa: false    Matriculas Abertas: true
+Nome: Psicologia Educacional    Ativa: false    Matriculas Abertas: true
+Nome: Psicologia Organizacional e do Trabalho   Ativa: false    Matriculas Abertas: true
+Nome: Psicologia Forense        Ativa: false    Matriculas Abertas: true
+Nome: Psicologia do Trabalho    Ativa: false    Matriculas Abertas: true
+Nome: Psicologia da Saúde       Ativa: false    Matriculas Abertas: true
+Nome: Avaliação Psicológica     Ativa: false    Matriculas Abertas: true
+Nome: Psicologia Cognitiva      Ativa: false    Matriculas Abertas: true
+Nome: Psicologia do Desenvolvimento Infantil    Ativa: false    Matriculas Abertas: true
+Nome: Psicologia do Desenvolvimento Adulta      Ativa: false    Matriculas Abertas: true
+Nome: Psicologia da Geriatria   Ativa: false    Matriculas Abertas: true
+Nome: Psicologia e Cultura      Ativa: false    Matriculas Abertas: true
+Nome: Intervenções Psicológicas Ativa: false    Matriculas Abertas: true
+Nome: Psicologia Experimental   Ativa: false    Matriculas Abertas: true
+Nome: Psicologia da Educação    Ativa: false    Matriculas Abertas: true
+Nome: Ética e Legislação em Psicologia  Ativa: false    Matriculas Abertas: true
+Nome: Psicologia Social Comunitária     Ativa: false    Matriculas Abertas: true
+Nome: Psicologia e Políticas Públicas   Ativa: false    Matriculas Abertas: true
+Nome: Psicologia na Educação e Aprendizagem     Ativa: false    Matriculas Abertas: true
+Nome: Terapias Cognitivo-Comportamentais        Ativa: false    Matriculas Abertas: true
+Nome: Psicologia e Qualidade de Vida    Ativa: false    Matriculas Abertas: true
+Nome: Psicologia e Neurociências        Ativa: false    Matriculas Abertas: true
+Nome: Psicologia do Transtorno de Estresse Pós-Traumático       Ativa: false    Matriculas Abertas: true
+Nome: Psicologia e Saúde Mental Ativa: false    Matriculas Abertas: true
+Nome: Psicologia e Tecnologias Digitais Ativa: false    Matriculas Abertas: true
+Nome: Prática Profissional em Psicologia        Ativa: false    Matriculas Abertas: true
+Nome: Estágio Supervisionado em Psicologia      Ativa: false    Matriculas Abertas: true
 =======Professores=======
 Poliana 1234
 Olivia  qwert
@@ -311,4 +392,15 @@ A       1
 Ana     1234
 A       1
 =========Turmas=========
-Nao há registros
+ID: Turma -1    Professor: null Disciplina: Psicologia do Desenvolvimento       Alunos:
+        Amanda
+ID: Turma -1    Professor: null Disciplina: Processos Psicológicos Básicos      Alunos:
+        Amanda
+ID: Turma -1    Professor: null Disciplina: Fundamentos de Psicologia   Alunos:
+        Amanda
+ID: Turma -1    Professor: null Disciplina: Psicologia da Personalidade Alunos:
+        Amanda
+ID: Turma -1    Professor: null Disciplina: Teorias e Sistemas Psicológicos     Alunos:
+        Amanda
+ID: Turma -1    Professor: null Disciplina: Psicologia Social   Alunos:
+        Amanda
