@@ -46,23 +46,23 @@ public class Disciplina implements Serializable {
         return nome;
     }
 
-    public void lerArquivo() throws FileNotFoundException {
+    // public void lerArquivo() throws FileNotFoundException {
 
-        Scanner scan = new Scanner(new File("project/code/Disciplinas.txt"));
+    //     Scanner scan = new Scanner(new File("project/code/Disciplinas.txt"));
 
-        while (scan.hasNextLine()) {
+    //     while (scan.hasNextLine()) {
 
-            String[] line = scan.nextLine().split("\t");
+    //         String[] line = scan.nextLine().split("\t");
 
-            this.nome = line[0];
+    //         this.nome = line[0];
 
-            this.ativa = Boolean.valueOf(line[1]);
+    //         this.ativa = Boolean.valueOf(line[1]);
 
-            this.isMatriculasAbertas = Boolean.valueOf(line[2]);
+    //         this.isMatriculasAbertas = Boolean.valueOf(line[2]);
 
-        }
-        scan.close();
-    }
+    //     }
+    //     scan.close();
+    // }
 
     public Boolean getAtiva() {
         return ativa;

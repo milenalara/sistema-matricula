@@ -66,7 +66,7 @@ public class Secretario extends Usuario {
         return true;
     }
 
-    public static Boolean encerrarMatricular() {
+    public static Boolean encerrarMatriculas() {
         List<Disciplina> disciplinas = Disciplina.getAll();
         if (disciplinas == null || disciplinas.size() == 0)
             return false;

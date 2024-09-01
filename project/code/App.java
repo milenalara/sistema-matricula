@@ -86,7 +86,7 @@ public class App {
                     System.out.println("Matrículas abertas");
                     break;
                 case "4":
-                    Secretario.encerrarMatricular();
+                    Secretario.encerrarMatriculas();
                     System.out.println("Matrículas encerradas");
                     break;
                 default:

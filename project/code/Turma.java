@@ -3,14 +3,14 @@ import java.io.Serializable;
 import java.util.ArrayList;
 
 public class Turma implements Serializable {
-    private Integer MIN_ALUNOS = 3;
-    private Integer MAX_ALUNOS = 60;
     private String name;
-    private List<Aluno> alunos;
     private String professorId;
     private String disciplinaId;
+    private List<Aluno> alunos;
     private static List<Turma> turmas;
     private static int nextId = 1;
+    private Integer MIN_ALUNOS = 3;
+    private Integer MAX_ALUNOS = 60;
 
     public Turma(String disciplinaId) {
         this.disciplinaId = disciplinaId;
@@ -18,7 +18,7 @@ public class Turma implements Serializable {
         this.alunos = new ArrayList<>();
     }
 
-    public String generateId() {
+    private String generateId() {
         return "Turma " + nextId++;
     }
 

@@ -97,7 +97,7 @@ public class Aluno extends Usuario {
         return false;
     }
 
-    public Double calcularMensalidade() {
+    private Double calcularMensalidade() {
         Integer numDisciplinasMatriculadas = this.disciplinas.size();
         Double valorPorDisciplina = 200.00;
         return numDisciplinasMatriculadas * valorPorDisciplina;

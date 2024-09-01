@@ -9,44 +9,67 @@ class Usuario{
 }
 
 class Secretario{
-    -Secretario List<secretarios>
+    -List<Secretario> secretarios
+    +Secretario getById(String identifier)
     +void addToList(Secretario secretario)
     +void gerarCurriculo()
+    +Boolean abrirMatriculas()
+    +Boolean encerrarMatriculas()
 }
 
 
 class Professor{
-    -Professor List<professores>
+    -List<Professor> professores
+    +Secretario getById(String identifier)
+    +void addToList(Professor professor)
     +void consultarMatriculas(Turma turma)
 }
 
 class Aluno{
-    -String[4] disciplinas
-    -Diciplina List<diciplinas>
+    -List<Aluno> alunos
+    -List<Diciplina> diciplinas
+    +Aluno getById(String identifier)
+    +void addToList(Aluno aluno)
     +void matricularEmDisciplina(Disciplina disciplina)
     +void cancelarMatriculaDisciplina(Disciplina disciplina)
-    +void pagarDisciplina(Disciplina disciplina)
+    -Double calcularMensalidade()
+    +void pagarDisciplinas(Scanner scan)
+    +void visualizarDisciplinas()
+
 }
 
 class Curso{
     -String nome
     -Int creditos
     -String[] disciplinasIds
+    +Curso getById(String identifier)
 }
 
 class Disciplina{
     -String nome
     -Boolean ativa
     -Boolean isMatriculasAbertas
-    -Disciplina List<disciplinas>
+    -List<Disciplina> disciplinas
+    +void addToList(Disciplina disciplina)
+    +Disciplina getById(String identifier)
 }
 
 class Turma{
     -String name
-    -String[1000] alunosIds
     -String professorId
     -String dusciplinaId
-    -Turma List<turmas>
+    -List<Aluno> alunos
+    -List<Turma> turmas
+    -int nextId
+    -int MIN_ALUNOS
+    -int MAX_ALUNOS
+    -String generateId()
+    +Turma getById(String identifier)
+    +void addToList(Turma turma)
+    +List<Aluno> getAlunos()
+    +Boolean addAluno(Aluno aluno)
+    +Boolean isTurmaCheia()
+    +Turma getByDisciplinaId(String disciplinaId)
 }
 
 Usuario <|-- Secretario
