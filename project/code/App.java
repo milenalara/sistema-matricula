@@ -17,26 +17,21 @@ public class App {
         Scanner scan = new Scanner(System.in);
 
         switch (scan.nextLine()) {
-
             case "1":
                 String nome = Cadastrador.fazerLoginAluno(scan);
                 caseAluno(scan, nome);
                 break;
-
             case "2":
                 Cadastrador.fazerLoginProf(scan);
                 caseProfessor(scan);
                 break;
-
             case "3":
                 Cadastrador.fazerLoginSecretaria(scan);
                 caseSecretario(scan);
                 break;
-
             case "4":
                 Cadastrador.fazerCadastro(scan);
                 break;
-
             default:
                 System.out.println("Favor selecionar uma opçõa válida");
                 break;
@@ -50,47 +45,54 @@ public class App {
 
     public static void caseSecretario(Scanner scan) throws IllegalArgumentException, IllegalAccessException,
             InstantiationException, InvocationTargetException, NoSuchMethodException, SecurityException {
-        System.out.println(
-                "Bem vindo ao portal do secretario\nO que deseja fazer?\n1)Gerar currículo\n2)Gerenciar informações");
 
-        String opc = scan.nextLine();
-        switch (opc) {
-            case "1":
-                Secretario.gerarCurriculo();
-                break;
+        String opc;
+        System.out.println("Bem vindo ao portal do secretario");
 
-            case "2":
-                System.out.println(
-                        "1)Criar um novo registro\n2)Acessar registros\n3)Deletar um registro\n4)Atualizar um registro");
-                switch (scan.nextLine()) {
-                    case "1":
-                        caseCriarRegistro(scan);
-                        break;
-                    case "2":
-                        verTodosRegistros();
-                        break;
-                    case "3":
-                        deletarRegistro(scan);
-                        break;
-                    case "4":
-                        atualizarRegistro(scan);
-                        break;
-                    default:
-                        System.out.println("opcao invalida");
-                        break;
-                }
-                break;
-            default:
-                System.out.println("Favor selecionar uma opção válida");
-                break;
-        }
-
+        do {
+            System.out.println("O que deseja fazer?\n1)Gerar currículo\n2)Gerenciar informações\n0)Encerrar o programa");
+            opc = scan.nextLine();
+            switch (opc) {
+                case "1":
+                    Secretario.gerarCurriculo();
+                    break;
+                case "2":
+                    System.out.println(
+                            "1)Criar um novo registro\n2)Acessar registros\n3)Deletar um registro\n4)Atualizar um registro");
+                    switch (scan.nextLine()) {
+                        case "1":
+                            caseCriarRegistro(scan);
+                            break;
+                        case "2":
+                            verTodosRegistros();
+                            break;
+                        case "3":
+                            deletarRegistro(scan);
+                            break;
+                        case "4":
+                            atualizarRegistro(scan);
+                            break;
+                        default:
+                            System.out.println("opcao invalida");
+                            break;
+                    }
+                    break;
+                default:
+                    System.out.println("Favor selecionar uma opção válida");
+                    break;
+            }
+        } while (!opc.equals("0"));
     }
 
     public static void caseProfessor(Scanner scan) {
-        System.out.println(
-                "Bem vindo ao portal do professor\nDigite o ID de uma turma para consultar suas matriculas");
-        Professor.consultarMatriculas(Turma.getById(scan.nextLine()));
+        System.out.println("Bem vindo ao portal do professor\n");
+        String op;
+        do {
+            System.out.println("Digite o ID de uma turma para consultar suas matriculas");
+            Professor.consultarMatriculas(Turma.getById(scan.nextLine()));
+            System.out.println("Deseja consultar outra turma? (S/N)");
+            op = scan.nextLine();
+        } while (op.equals("S"));
     }
 
     public static void caseAluno(Scanner scan, String nome) {
@@ -179,25 +181,24 @@ public class App {
     }
 
     private static void verTodosRegistros() {
-
-        System.out.println("Alunos:");
+        System.out.println("\n=========Alunos========");
         verRegistros(Aluno.getAll());
 
-        System.out.println("Cursos:");
+        System.out.println("=========Cursos=========");
         verRegistros(Curso.getAll());
 
-        System.out.println("Disciplina");
+        System.out.println("=======Disciplina=======");
         verRegistros(Disciplina.getAll());
 
-        System.out.println("Professores:");
+        System.out.println("=======Professores=======");
         verRegistros(Professor.getAll());
 
-        System.out.println("Secretarios");
+        System.out.println("=======Secretarios=======");
         verRegistros(Secretario.getAll());
 
-        System.out.println("Turmas");
+        System.out.println("=========Turmas=========");
         verRegistros(Turma.getAll());
-
+        System.out.println();
     }
 
     private static <T> void verRegistros(List<T> lista) {
@@ -209,7 +210,7 @@ public class App {
                 }
             }
         } else {
-            System.out.println("Nao ha registros");
+            System.out.println("Nao há registros");
         }
     }
 

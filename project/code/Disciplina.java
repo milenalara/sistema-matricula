@@ -90,7 +90,7 @@ public class Disciplina implements Serializable {
 
     @Override
     public String toString() {
-        return "Nome: " + nome + "Ativa: " + ativa + "Matriculas Abertas: " + isMatriculasAbertas;
+        return "Nome: " + nome + "\tAtiva: " + ativa + "\tMatriculas Abertas: " + isMatriculasAbertas;
     }
 
     public static void setAll(List<Disciplina> disciplinas) {

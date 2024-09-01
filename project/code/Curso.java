@@ -40,7 +40,7 @@ public class Curso implements Serializable{
     @Override
     public String toString(){
 
-        String infos =  nome + "Creditos: " + String.valueOf(creditos) + "Disciplinas: ";
+        String infos =  nome + "Creditos: " + String.valueOf(creditos) + "\tDisciplinas: ";
 
         for (String disciplina : disciplinasIds) {
             infos = infos + disciplina + "\t";
