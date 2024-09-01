@@ -4,17 +4,13 @@ import java.util.ArrayList;
 
 public class Turma implements Serializable {
     private Integer MIN_ALUNOS = 3;
-    private Integer MAX_ALUNOS = 5;
+    private Integer MAX_ALUNOS = 60;
     private String name;
     private List<Aluno> alunos;
     private String professorId;
     private String disciplinaId;
     private static List<Turma> turmas;
-
-    public Turma() {
-        this.name = generateId();
-        this.alunos = new ArrayList<>();
-    }
+    private static int nextId = 1;
 
     public Turma(String disciplinaId) {
         this.disciplinaId = disciplinaId;
@@ -23,19 +19,15 @@ public class Turma implements Serializable {
     }
 
     public String generateId() {
-        return "Turma " + (turmas.indexOf(this) + 1);
+        return "Turma " + nextId++;
     }
 
     public static Turma getById(String identifier) {
-        if (turmas == null) {
-            turmas = new ArrayList<>();
-        }
         for (Turma componente : Turma.turmas) {
             if (componente != null) {
                 if (identifier.equals(componente.getId())) {
                     return componente;
                 }
-                ;
             }
         }
         System.out.println("Turma " + identifier + " nao encontrada");
@@ -134,6 +126,14 @@ public class Turma implements Serializable {
             return true;
         }
         return false;
+    }
+
+    public static Turma getByDisciplinaId(String disciplinaId) {
+        for (Turma turma : turmas) {
+            if (turma.getDisciplinaId().equals(disciplinaId))
+                return turma;
+        }
+        return null;
     }
 
 }

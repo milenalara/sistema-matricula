@@ -61,8 +61,9 @@ public class Aluno extends Usuario {
                 return false;
             }
         }
-        Turma turma = Turma.getById(disciplina.getId());
-        if (turma == null) {
+        Turma turma = Turma.getByDisciplinaId(disciplina.getId());
+
+        if (turma == null || turma.isTurmaCheia()) {
             System.out.println("Criando nova turma");
             turma = new Turma(disciplina.getId());
             Turma.addToList(turma);
@@ -152,7 +153,6 @@ public class Aluno extends Usuario {
         }
 
         return infos;
-
     }
 
     public static void setAll(List<Aluno> alunos) {
