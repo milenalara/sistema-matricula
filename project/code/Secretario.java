@@ -33,7 +33,7 @@ public class Secretario extends Usuario {
 
     public static void gerarCurriculo() {
 
-        if (Curso.getAll()!=null&&!Curso.getAll().isEmpty()) {
+        if (Curso.getAll() != null && !Curso.getAll().isEmpty()) {
             System.out.println("=========Cursos=========");
             for (Curso curso : Curso.getAll()) {
                 System.out.println(curso.toString());
@@ -42,7 +42,7 @@ public class Secretario extends Usuario {
             System.out.println("Nao ha cursos no momento");
         }
 
-        if (Professor.getAll()!=null&&!Professor.getAll().isEmpty()) {
+        if (Professor.getAll() != null && !Professor.getAll().isEmpty()) {
             System.out.println("========Professores========");
             for (Professor professor : Professor.getAll()) {
                 System.out.println(professor.getId());
@@ -54,5 +54,25 @@ public class Secretario extends Usuario {
 
     public static void setAll(List<Secretario> secretarios) {
         Secretario.secretarios = secretarios;
+    }
+
+    public static Boolean abrirMatriculas() {
+        List<Disciplina> disciplinas = Disciplina.getAll();
+        if (disciplinas == null || disciplinas.size() == 0)
+            return false;
+        for (Disciplina disciplina : disciplinas) {
+            disciplina.setIsMatriculasAbertas(true);
+        }
+        return true;
+    }
+
+    public static Boolean encerrarMatricular() {
+        List<Disciplina> disciplinas = Disciplina.getAll();
+        if (disciplinas == null || disciplinas.size() == 0)
+            return false;
+        for (Disciplina disciplina : disciplinas) {
+            disciplina.setIsMatriculasAbertas(false);
+        }
+        return true;
     }
 }

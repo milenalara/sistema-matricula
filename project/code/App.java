@@ -51,7 +51,8 @@ public class App {
 
         do {
             System.out
-                    .println("O que deseja fazer?\n1)Gerar currículo\n2)Gerenciar informações\n0)Encerrar o programa");
+                    .println(
+                            "O que deseja fazer?\n1)Gerar currículo\n2)Gerenciar informações\n3)Abrir período de matrículas\n4)Encerrar período de matrículas\n0)Encerrar o programa");
             opc = scan.nextLine();
             switch (opc) {
                 case "0":
@@ -76,9 +77,17 @@ public class App {
                             atualizarRegistro(scan);
                             break;
                         default:
-                            System.out.println("opcao invalida");
+                            System.out.println("Opcao invalida");
                             break;
                     }
+                    break;
+                case "3":
+                    Secretario.abrirMatriculas();
+                    System.out.println("Matrículas abertas");
+                    break;
+                case "4":
+                    Secretario.encerrarMatricular();
+                    System.out.println("Matrículas encerradas");
                     break;
                 default:
                     System.out.println("Favor selecionar uma opção válida");
