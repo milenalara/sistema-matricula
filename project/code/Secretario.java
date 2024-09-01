@@ -34,7 +34,7 @@ public class Secretario extends Usuario {
     public static void gerarCurriculo() {
 
         if (Curso.getAll()!=null&&!Curso.getAll().isEmpty()) {
-            System.out.println("Cursos:");
+            System.out.println("=========Cursos=========");
             for (Curso curso : Curso.getAll()) {
                 System.out.println(curso.toString());
             }
@@ -43,7 +43,7 @@ public class Secretario extends Usuario {
         }
 
         if (Professor.getAll()!=null&&!Professor.getAll().isEmpty()) {
-            System.out.println("Professores:");
+            System.out.println("========Professores========");
             for (Professor professor : Professor.getAll()) {
                 System.out.println(professor.getId());
             }

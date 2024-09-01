@@ -42,11 +42,11 @@ public class Curso implements Serializable{
     @Override
     public String toString(){
 
-        String infos =  nome + "\tCreditos: " + String.valueOf(creditos) + "\tDisciplinas: ";
+        String infos =  nome + "\n\tCreditos: " + String.valueOf(creditos) + "\n\tDisciplinas: ";
 
         for (String disciplina : disciplinasIds) {
             if(disciplina == null) break;
-            infos = infos + disciplina + "\n\t";
+            infos = infos + disciplina + "\n\t\t";
         }
 
         return infos;

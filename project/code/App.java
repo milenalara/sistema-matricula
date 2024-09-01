@@ -209,7 +209,7 @@ public class App {
         System.out.println("=========Cursos=========");
         verRegistros(Curso.getAll());
 
-        System.out.println("=======Disciplina=======");
+        System.out.println("=======Disciplinas=======");
         verRegistros(Disciplina.getAll());
 
         System.out.println("=======Professores=======");
