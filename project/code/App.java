@@ -106,7 +106,7 @@ public class App {
             System.out.println("1)Matricular-se em disciplina");
             System.out.println("2)Cancelar matrícula em disciplina");
             System.out.println("3)Visualizar disciplinas matriculadas");
-            System.out.println("4) Realizar pagamento da mensalidade");
+            System.out.println("4)Realizar pagamento da mensalidade");
             System.out.println("0)Encerrar o programa");
 
             op = scan.nextLine();

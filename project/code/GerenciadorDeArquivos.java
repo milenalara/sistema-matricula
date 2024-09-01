@@ -58,7 +58,7 @@ public class GerenciadorDeArquivos {
             
             return null;
         }catch(EOFException eofe){
-            return new ArrayList<T>();
+            return null;
         } catch (Exception e) {
             System.out.println("lerArquivo; GerenciadorDeArquivos: " + e);
             return null;
