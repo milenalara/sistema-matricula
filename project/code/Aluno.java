@@ -103,7 +103,7 @@ public class Aluno extends Usuario {
         return numDisciplinasMatriculadas * valorPorDisciplina;
     }
 
-    public void pagarDisciplina(Disciplina disciplina, Scanner scan) {
+    public void pagarDisciplinas(Scanner scan) {
         System.out.println("O valor da sua mensalidade será R$" + calcularMensalidade());
         System.out.println("Confirmar pagamento? (S/N)");
 
