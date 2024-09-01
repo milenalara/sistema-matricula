@@ -1,0 +1,47 @@
+3
+A
+1
+2
+1
+2
+Psicologia
+2000
+Psicologia do Desenvolvimento
+Processos Psicológicos Básicos
+Fundamentos de Psicologia
+Psicologia da Personalidade
+Teorias e Sistemas Psicológicos
+Psicologia Social
+Métodos e Técnicas de Pesquisa em Psicologia
+Psicopatologia
+Psicologia Clínica
+Psicologia Educacional
+Psicologia Organizacional e do Trabalho
+Psicologia Forense
+Psicologia do Trabalho
+Psicologia da Saúde
+Avaliação Psicológica
+Psicologia Cognitiva
+Psicologia do Desenvolvimento Infantil
+Psicologia do Desenvolvimento Adulta
+Psicologia da Geriatria
+Psicologia e Cultura
+Intervenções Psicológicas
+Psicologia Experimental
+Psicologia da Educação
+Ética e Legislação em Psicologia
+Psicologia Social Comunitária
+Psicologia e Políticas Públicas
+Psicologia na Educação e Aprendizagem
+Terapias Cognitivo-Comportamentais
+Psicologia e Qualidade de Vida
+Psicologia e Neurociências
+Psicologia do Transtorno de Estresse Pós-Traumático
+Psicologia e Saúde Mental
+Psicologia e Tecnologias Digitais
+Prática Profissional em Psicologia
+Estágio Supervisionado em Psicologia
+Trabalho de Conclusão de Curso (TCC)
+FIM
+0
+0

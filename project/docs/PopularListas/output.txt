@@ -1,0 +1,314 @@
+=========Alunos========
+Login: Amanda   Senha: 1234     Disciplinas em estudo: 
+Login: Bernardo Senha: 9wXy8    Disciplinas em estudo: 
+Login: Carlos   Senha: jk3#f    Disciplinas em estudo: 
+Login: Daniel   Senha: G7Hp3    Disciplinas em estudo: 
+Login: Eduarda  Senha: LmnO4Z   Disciplinas em estudo: 
+Login: Fernanda Senha: 9Fs#67G  Disciplinas em estudo: 
+Login: Gabriel  Senha: 2Hx!y9   Disciplinas em estudo: 
+Login: Helena   Senha: sD3wQ1   Disciplinas em estudo: 
+Login: Isabela  Senha: 8uNvL4   Disciplinas em estudo: 
+Login: João     Senha: Rt5%2J   Disciplinas em estudo: 
+Login: Karla    Senha: q6Zx#1   Disciplinas em estudo: 
+Login: Lucas    Senha: z9Tj7g   Disciplinas em estudo: 
+Login: Mariana  Senha: Xy!4Qs   Disciplinas em estudo: 
+Login: Natália  Senha: V3Bf8k   Disciplinas em estudo: 
+Login: Olavo    Senha: Z7m@P2   Disciplinas em estudo: 
+Login: Paula    Senha: qW2n#9   Disciplinas em estudo: 
+Login: Quintino Senha: 4Ef%a8   Disciplinas em estudo: 
+Login: Rafaela  Senha: bG7wH3   Disciplinas em estudo: 
+Login: Sérgio   Senha: dF9tQ2   Disciplinas em estudo: 
+Login: Tatiana  Senha: Jk6#pR   Disciplinas em estudo: 
+Login: Ursula   Senha: 9xV!4m   Disciplinas em estudo: 
+Login: Vinícius Senha: Fs3%7D   Disciplinas em estudo: 
+Login: Wellington       Senha: aP2z@5   Disciplinas em estudo: 
+Login: Xavier   Senha: g7T#6k   Disciplinas em estudo: 
+Login: Yasmin   Senha: tW3!9x   Disciplinas em estudo: 
+Login: Zuleica  Senha: L6Df2Q   Disciplinas em estudo: 
+Login: Alice    Senha: w7P!5g   Disciplinas em estudo: 
+Login: Bruno    Senha: yX4#2j   Disciplinas em estudo: 
+Login: Caio     Senha: dF8%9k   Disciplinas em estudo: 
+Login: Diego    Senha: n2T@5w   Disciplinas em estudo: 
+Login: Elisa    Senha: q9X!4m   Disciplinas em estudo: 
+Login: Felipe   Senha: v3B%6L   Disciplinas em estudo: 
+Login: Gustavo  Senha: H7t!8p   Disciplinas em estudo: 
+Login: Hugo     Senha: m2Q#9f   Disciplinas em estudo: 
+Login: Ingrid   Senha: x6L!5r   Disciplinas em estudo: 
+Login: Júlia    Senha: b3D%7k   Disciplinas em estudo: 
+Login: Kleber   Senha: rT9!6g   Disciplinas em estudo: 
+Login: Lúcia    Senha: p4V#8m   Disciplinas em estudo: 
+Login: Marcelo  Senha: y2N@5f   Disciplinas em estudo: 
+Login: Nina     Senha: t5G!7j   Disciplinas em estudo: 
+Login: Otávio   Senha: w4K%9x   Disciplinas em estudo: 
+Login: Priscila Senha: v6F!8m   Disciplinas em estudo: 
+Login: Quésia   Senha: z9L@3r   Disciplinas em estudo: 
+Login: Ricardo  Senha: j7T%5k   Disciplinas em estudo: 
+Login: Silvia   Senha: x2H!6n   Disciplinas em estudo: 
+Login: Tiago    Senha: dF9%7w   Disciplinas em estudo: 
+Login: Ulisses  Senha: m3G!8p   Disciplinas em estudo: 
+Login: Vânia    Senha: t5L#9k   Disciplinas em estudo: 
+Login: William  Senha: y2P%6j   Disciplinas em estudo: 
+Login: Xênia    Senha: v9T!4g   Disciplinas em estudo: 
+Login: Yuri     Senha: n3V#7f   Disciplinas em estudo: 
+Login: Zilda    Senha: w6K@5m   Disciplinas em estudo: 
+Login: Adriana  Senha: j8F%9x   Disciplinas em estudo: 
+Login: Beatriz  Senha: x2L!7r   Disciplinas em estudo: 
+Login: Camila   Senha: t5G@8m   Disciplinas em estudo: 
+Login: Danilo   Senha: v9N!4k   Disciplinas em estudo: 
+Login: Estela   Senha: w7T#6f   Disciplinas em estudo: 
+Login: Flávio   Senha: p3V%9j   Disciplinas em estudo: 
+Login: Aline    Senha: k3H%7z   Disciplinas em estudo: 
+Login: Bárbara  Senha: n8X@2p   Disciplinas em estudo: 
+Login: César    Senha: r4T!5f   Disciplinas em estudo: 
+Login: Débora   Senha: s9V#6g   Disciplinas em estudo: 
+Login: Emanuel  Senha: q1Z%8m   Disciplinas em estudo: 
+Login: Fabiana  Senha: j7L@3x   Disciplinas em estudo: 
+Login: Guilherme        Senha: v2F!9k   Disciplinas em estudo: 
+Login: Heitor   Senha: w6T#4j   Disciplinas em estudo: 
+Login: Irene    Senha: y3P%5n   Disciplinas em estudo: 
+Login: José     Senha: m8V!7r   Disciplinas em estudo: 
+Login: Karen    Senha: z4H@9x   Disciplinas em estudo: 
+Login: Leandro  Senha: b7T!6p   Disciplinas em estudo: 
+Login: Marta    Senha: x2G%8k   Disciplinas em estudo: 
+Login: Nicolas  Senha: d5L#3f   Disciplinas em estudo: 
+Login: Otília   Senha: p9V!7m   Disciplinas em estudo: 
+Login: Pedro    Senha: r2T%6j   Disciplinas em estudo: 
+Login: Quitéria Senha: n4G#5k   Disciplinas em estudo: 
+Login: Rodrigo  Senha: w8F!3x   Disciplinas em estudo: 
+Login: Sônia    Senha: j6L@9f   Disciplinas em estudo: 
+Login: Talita   Senha: v3P%7m   Disciplinas em estudo: 
+Login: Uliana   Senha: k5T!4g   Disciplinas em estudo: 
+Login: Victor   Senha: z2V#8j   Disciplinas em estudo: 
+Login: Wesley   Senha: t7L@9k   Disciplinas em estudo: 
+Login: Ximena   Senha: y6G%5f   Disciplinas em estudo: 
+Login: Ygor     Senha: n3T!8r   Disciplinas em estudo: 
+Login: Zara     Senha: p4F@7m   Disciplinas em estudo: 
+Login: Brenda   Senha: r2T!6p   Disciplinas em estudo: 
+Login: Caetano  Senha: s7G%8f   Disciplinas em estudo: 
+Login: Diana    Senha: j4L@5x   Disciplinas em estudo: 
+Login: Eduardo  Senha: m3P!9k   Disciplinas em estudo: 
+Login: Francisco        Senha: z6T#7j   Disciplinas em estudo: 
+Login: Giovana  Senha: y8V%2m   Disciplinas em estudo: 
+Login: Heloísa  Senha: b5L!3k   Disciplinas em estudo: 
+Login: Ian      Senha: q7T@4f   Disciplinas em estudo: 
+Login: Janaína  Senha: v9G%6j   Disciplinas em estudo: 
+Login: Kátia    Senha: n2P#7m   Disciplinas em estudo: 
+Login: Leonardo Senha: t4F!5r   Disciplinas em estudo: 
+Login: Michele  Senha: r8V@3k   Disciplinas em estudo: 
+Login: Natanael Senha: w6T#9f   Disciplinas em estudo: 
+Login: Olga     Senha: p2L%4g   Disciplinas em estudo: 
+Login: Patrícia Senha: z7G!8m   Disciplinas em estudo: 
+Login: Raquel   Senha: n3T@6j   Disciplinas em estudo: 
+Login: Sandra   Senha: x9V%5k   Disciplinas em estudo: 
+Login: Tadeu    Senha: r5F#7f   Disciplinas em estudo: 
+Login: Ubirajara        Senha: w8L!2p   Disciplinas em estudo: 
+Login: Verônica Senha: t6G@9m   Disciplinas em estudo: 
+Login: Wanda    Senha: y3T!5x   Disciplinas em estudo: 
+Login: Xisto    Senha: n4V%7k   Disciplinas em estudo: 
+Login: Yara     Senha: j9F#6r   Disciplinas em estudo: 
+Login: Zaqueu   Senha: m2P!8j   Disciplinas em estudo: 
+Login: Ariane   Senha: k7G@5f   Disciplinas em estudo: 
+Login: Clara    Senha: p8T!9k   Disciplinas em estudo: 
+Login: Eliane   Senha: z5F!6r   Disciplinas em estudo: 
+Login: Fabio    Senha: w9L@3j   Disciplinas em estudo: 
+Login: Geovana  Senha: n6T%5m   Disciplinas em estudo: 
+=========Cursos=========
+Arquitetura e Urbanismo
+        Creditos: 2000
+        Disciplinas: 
+                Desenho Técnico Arquitetônico
+                Projeto de Arquitetura I
+                Materiais de Construção
+                Projeto de Urbanismo I
+                Planejamento Urbano e Regional
+                Projeto de Arquitetura II
+                Conforto Ambiental
+                História da Arquitetura e Urbanismo
+                Estética e História da Arte
+                Projeto de Arquitetura III
+                Projeto de Interiores
+                Estruturas Arquitetônicas
+                Planejamento Urbano e Regional II
+                Sistemas Estruturais
+                Projeto de Paisagismo
+                Projeto de Arquitetura IV
+                Tecnologias Construtivas
+                Gestão de Obras
+                Desenho de Sombra e Perspectiva
+                Técnicas Retrospectivas de Edificações
+                Patrimônio Histórico e Cultural
+                Projeto Executivo de Arquitetura
+                Projeto de Urbanismo II
+                Sustentabilidade na Construção Civil
+                Ética e Legislação Profissional
+                Acessibilidade em Projetos Arquitetônicos
+                Gerenciamento de Projetos Arquitetônicos
+                Projeto de Restauração de Edifícios
+                Design de Interiores Comerciais
+                Projeto de Arquitetura V
+                Topografia e Geoprocessamento
+                Modelagem de Informação da Construção (BIM)
+                Gestão Urbana e Ambiental
+                Projeto de Arquitetura VI
+                Tópicos Avançados em Arquitetura
+                Técnicas de Representação Gráfica
+                Ergonomia em Projetos Arquitetônicos
+                Técnicas de Construção Sustentável
+                Projeto de Arquitetura VII
+                Fundamentos de Acústica Arquitetônica
+                Projeto Urbano Sustentável
+                Planejamento de Espaços Públicos
+                Projeto de Arquitetura VIII
+                Legislação Urbanística e Ambiental
+                Projeto Integrado de Urbanismo
+                Projeto de Arquitetura IX
+                Gestão de Riscos em Obras
+                Tecnologias Emergentes em Arquitetura
+                Prática Profissional em Arquitetura
+                Estágio Supervisionado em Arquitetura
+                Trabalho de Conclusão de Curso (TCC)
+
+Engenharia de Software
+        Creditos: 1500
+        Disciplinas: 
+                Arquitetura de Software  
+                Desenvolvimento Ágil de Software  
+                Engenharia de Requisitos  
+                Gerência de Projetos de Software  
+                Modelagem de Software  
+                Padrões de Projeto  
+                Qualidade de Software  
+                Teste de Software  
+                Usabilidade e Experiência do Usuário  
+                Segurança de Software  
+                Integração Contínua e DevOps  
+                Engenharia de Software Móvel  
+                Reengenharia de Software  
+                Gerenciamento de Configuração  
+                Métodos Ágeis de Desenvolvimento  
+                Engenharia de Software para Jogos  
+                Automação de Testes  
+                Gerenciamento de Qualidade de Software  
+                Métodos de Pesquisa em Engenharia de Software  
+                Engenharia de Software para Internet das Coisas  
+                Programação Orientada a Aspectos  
+                Desenvolvimento de API  
+                Engenharia de Software para Sistemas Complexos  
+                Engenharia de Software para Inteligência Artificial  
+                Análise de Performance de Software  
+                Tecnologias Emergentes em Software  
+                Métodos de Avaliação de Software  
+                Desenvolvimento de Software Sustentável  
+                Engenharia de Software para Realidade Aumentada  
+                Estratégias de Otimização de Software  
+                Engenharia de Software para Computação em Nuvem  
+                Gestão de Projetos de Software  
+                Engenharia de Software em Ambientes Regulamentados
+
+=======Disciplinas=======
+Nome: Algoritmos e Estruturas de Dados  Ativa: false    Matriculas Abertas: true
+Nome: Arquitetura de Software   Ativa: false    Matriculas Abertas: true
+Nome: Banco de Dados    Ativa: false    Matriculas Abertas: true
+Nome: Desenvolvimento Ágil de Software  Ativa: false    Matriculas Abertas: true
+Nome: Engenharia de Requisitos  Ativa: false    Matriculas Abertas: true
+Nome: Gerência de Projetos de Software  Ativa: false    Matriculas Abertas: true
+Nome: Modelagem de Software     Ativa: false    Matriculas Abertas: true
+Nome: Padrões de Projeto        Ativa: false    Matriculas Abertas: true
+Nome: Programação Orientada a Objetos   Ativa: false    Matriculas Abertas: true
+Nome: Qualidade de Software     Ativa: false    Matriculas Abertas: true
+Nome: Teste de Software Ativa: false    Matriculas Abertas: true
+Nome: Usabilidade e Experiência do Usuário      Ativa: false    Matriculas Abertas: true
+Nome: Sistemas Distribuídos     Ativa: false    Matriculas Abertas: true
+Nome: Desenvolvimento para Web  Ativa: false    Matriculas Abertas: true
+Nome: Segurança de Software     Ativa: false    Matriculas Abertas: true
+Nome: Integração Contínua e DevOps      Ativa: false    Matriculas Abertas: true
+Nome: Engenharia de Software Móvel      Ativa: false    Matriculas Abertas: true
+Nome: Reengenharia de Software  Ativa: false    Matriculas Abertas: true
+Nome: Gerenciamento de Configuração     Ativa: false    Matriculas Abertas: true
+Nome: Métodos Ágeis de Desenvolvimento  Ativa: false    Matriculas Abertas: true
+Nome: Design de Interface       Ativa: false    Matriculas Abertas: true
+Nome: Computação em Nuvem       Ativa: false    Matriculas Abertas: true
+Nome: Programação Funcional     Ativa: false    Matriculas Abertas: true
+Nome: Sistemas Operacionais     Ativa: false    Matriculas Abertas: true
+Nome: Desenvolvimento de Sistemas Embarcados    Ativa: false    Matriculas Abertas: true
+Nome: Análise e Projeto de Sistemas     Ativa: false    Matriculas Abertas: true
+Nome: Engenharia de Software para Jogos Ativa: false    Matriculas Abertas: true
+Nome: Automação de Testes       Ativa: false    Matriculas Abertas: true
+Nome: Modelagem de Dados        Ativa: false    Matriculas Abertas: true
+Nome: Gerenciamento de Qualidade de Software    Ativa: false    Matriculas Abertas: true
+Nome: Métodos de Pesquisa em Engenharia de Software     Ativa: false    Matriculas Abertas: true
+Nome: Computação Paralela       Ativa: false    Matriculas Abertas: true
+Nome: Programação Concurrente   Ativa: false    Matriculas Abertas: true
+Nome: Design e Implementação de Algoritmos      Ativa: false    Matriculas Abertas: true
+Nome: Engenharia de Software para Internet das Coisas   Ativa: false    Matriculas Abertas: true
+Nome: Plataformas de Desenvolvimento    Ativa: false    Matriculas Abertas: true
+Nome: Gestão de Dados e Big Data        Ativa: false    Matriculas Abertas: true
+Nome: Programação Orientada a Aspectos  Ativa: false    Matriculas Abertas: true
+Nome: Desenvolvimento de API    Ativa: false    Matriculas Abertas: true
+Nome: Técnicas de Debugging     Ativa: false    Matriculas Abertas: true
+Nome: Infraestrutura de TI      Ativa: false    Matriculas Abertas: true
+Nome: Engenharia de Software para Sistemas Complexos    Ativa: false    Matriculas Abertas: true
+Nome: Engenharia de Software para Inteligência Artificial       Ativa: false    Matriculas Abertas: true
+Nome: Análise de Performance de Software        Ativa: false    Matriculas Abertas: true
+Nome: Tecnologias Emergentes em Software        Ativa: false    Matriculas Abertas: true
+Nome: Métodos de Avaliação de Software  Ativa: false    Matriculas Abertas: true
+Nome: Desenvolvimento de Software Sustentável   Ativa: false    Matriculas Abertas: true
+Nome: Engenharia de Software para Realidade Aumentada   Ativa: false    Matriculas Abertas: true
+Nome: Estratégias de Otimização de Software     Ativa: false    Matriculas Abertas: true
+Nome: Engenharia de Software para Computação em Nuvem   Ativa: false    Matriculas Abertas: true
+Nome: Sistemas de Informação    Ativa: false    Matriculas Abertas: true
+Nome: Arquitetura de Sistemas   Ativa: false    Matriculas Abertas: true
+Nome: Gestão de Projetos de Software    Ativa: false    Matriculas Abertas: true
+Nome: Engenharia de Software em Ambientes Regulamentados        Ativa: false    Matriculas Abertas: true
+Nome: Desenho Técnico Arquitetônico     Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Arquitetura I  Ativa: false    Matriculas Abertas: true
+Nome: Materiais de Construção   Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Urbanismo I    Ativa: false    Matriculas Abertas: true
+Nome: Planejamento Urbano e Regional    Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Arquitetura II Ativa: false    Matriculas Abertas: true
+Nome: Conforto Ambiental        Ativa: false    Matriculas Abertas: true
+Nome: História da Arquitetura e Urbanismo       Ativa: false    Matriculas Abertas: true
+Nome: Estética e História da Arte       Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Arquitetura III        Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Interiores     Ativa: false    Matriculas Abertas: true
+Nome: Estruturas Arquitetônicas Ativa: false    Matriculas Abertas: true
+Nome: Planejamento Urbano e Regional II Ativa: false    Matriculas Abertas: true
+Nome: Sistemas Estruturais      Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Paisagismo     Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Arquitetura IV Ativa: false    Matriculas Abertas: true
+Nome: Tecnologias Construtivas  Ativa: false    Matriculas Abertas: true
+Nome: Gestão de Obras   Ativa: false    Matriculas Abertas: true
+Nome: Desenho de Sombra e Perspectiva   Ativa: false    Matriculas Abertas: true
+Nome: Técnicas Retrospectivas de Edificações    Ativa: false    Matriculas Abertas: true
+Nome: Patrimônio Histórico e Cultural   Ativa: false    Matriculas Abertas: true
+Nome: Projeto Executivo de Arquitetura  Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Urbanismo II   Ativa: false    Matriculas Abertas: true
+Nome: Sustentabilidade na Construção Civil      Ativa: false    Matriculas Abertas: true
+Nome: Ética e Legislação Profissional   Ativa: false    Matriculas Abertas: true
+Nome: Acessibilidade em Projetos Arquitetônicos Ativa: false    Matriculas Abertas: true
+Nome: Gerenciamento de Projetos Arquitetônicos  Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Restauração de Edifícios       Ativa: false    Matriculas Abertas: true
+Nome: Design de Interiores Comerciais   Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Arquitetura V  Ativa: false    Matriculas Abertas: true
+Nome: Topografia e Geoprocessamento     Ativa: false    Matriculas Abertas: true
+Nome: Modelagem de Informação da Construção (BIM)       Ativa: false    Matriculas Abertas: true
+Nome: Gestão Urbana e Ambiental Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Arquitetura VI Ativa: false    Matriculas Abertas: true
+Nome: Tópicos Avançados em Arquitetura  Ativa: false    Matriculas Abertas: true
+Nome: Técnicas de Representação Gráfica Ativa: false    Matriculas Abertas: true
+Nome: Ergonomia em Projetos Arquitetônicos      Ativa: false    Matriculas Abertas: true
+Nome: Técnicas de Construção Sustentável        Ativa: false    Matriculas Abertas: true
+Nome: Projeto de Arquitetura VII        Ativa: false    Matriculas Abertas: true
+Nome: Fundamentos de Acústica Arquitetônica     Ativa: false    Matriculas Abertas: true
+Nome: Projeto Urbano Sustentável        Ativa: false    Matriculas Abertas: true
+=======Professores=======
+Poliana 1234
+Olivia  qwert
+Bruno   zxcv
+Lorena  gdfgdsfgfdgdfg
+=======Secretarios=======
+A       1
+Ana     1234
+A       1
+=========Turmas=========
+Nao há registros

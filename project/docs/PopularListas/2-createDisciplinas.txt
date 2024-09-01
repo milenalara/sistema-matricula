@@ -383,6 +383,146 @@ true
 Projeto Urbano Sustentável
 false
 true
+3
+Psicologia do Desenvolvimento
+false
+true
+3
+Processos Psicológicos Básicos
+false
+true
+3
+Fundamentos de Psicologia
+false
+true
+3
+Psicologia da Personalidade
+false
+true
+3
+Teorias e Sistemas Psicológicos
+false
+true
+3
+Psicologia Social
+false
+true
+3
+Métodos e Técnicas de Pesquisa em Psicologia
+false
+true
+3
+Psicopatologia
+false
+true
+3
+Psicologia Clínica
+false
+true
+3
+Psicologia Educacional
+false
+true
+3
+Psicologia Organizacional e do Trabalho
+false
+true
+3
+Psicologia Forense
+false
+true
+3
+Psicologia do Trabalho
+false
+true
+3
+Psicologia da Saúde
+false
+true
+3
+Avaliação Psicológica
+false
+true
+3
+Psicologia Cognitiva
+false
+true
+3
+Psicologia do Desenvolvimento Infantil
+false
+true
+3
+Psicologia do Desenvolvimento Adulta
+false
+true
+3
+Psicologia da Geriatria
+false
+true
+3
+Psicologia e Cultura
+false
+true
+3
+Intervenções Psicológicas
+false
+true
+3
+Psicologia Experimental
+false
+true
+3
+Psicologia da Educação
+false
+true
+3
+Ética e Legislação em Psicologia
+false
+true
+3
+Psicologia Social Comunitária
+false
+true
+3
+Psicologia e Políticas Públicas
+false
+true
+3
+Psicologia na Educação e Aprendizagem
+false
+true
+3
+Terapias Cognitivo-Comportamentais
+false
+true
+3
+Psicologia e Qualidade de Vida
+false
+true
+3
+Psicologia e Neurociências
+false
+true
+3
+Psicologia do Transtorno de Estresse Pós-Traumático
+false
+true
+3
+Psicologia e Saúde Mental
+false
+true
+3
+Psicologia e Tecnologias Digitais
+false
+true
+3
+Prática Profissional em Psicologia
+false
+true
+3
+Estágio Supervisionado em Psicologia
+false
+true
 0
 0
 
