@@ -16,7 +16,6 @@ public class App {
 
         Scanner scan = new Scanner(System.in);
 
-
         switch (scan.nextLine()) {
             case "1":
                 String nome = Cadastrador.fazerLoginAluno(scan);
@@ -51,7 +50,8 @@ public class App {
         System.out.println("Bem vindo ao portal do secretario");
 
         do {
-            System.out.println("O que deseja fazer?\n1)Gerar currículo\n2)Gerenciar informações\n0)Encerrar o programa");
+            System.out
+                    .println("O que deseja fazer?\n1)Gerar currículo\n2)Gerenciar informações\n0)Encerrar o programa");
             opc = scan.nextLine();
             switch (opc) {
                 case "0":
@@ -149,37 +149,45 @@ public class App {
 
     public static void caseCriarRegistro(Scanner scan) throws IllegalArgumentException, IllegalAccessException,
             InstantiationException, InvocationTargetException, NoSuchMethodException, SecurityException {
-        System.out
-                .println("O que deseja registrar?\n1)Aluno\n2)Curso\n3)Disciplina\n4)Professor\n5)Secretario\n6)Turma");
+        String op;
+        do {
+            System.out
+                    .println(
+                            "O que deseja registrar?\n1)Aluno\n2)Curso\n3)Disciplina\n4)Professor\n5)Secretario\n6)Turma\n0)Retornar ao menu anterior");
 
-        switch (scan.nextLine()) {
-            case "1":
-                Usuario u1 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
-                break;
-            case "2":
-            Curso c1 = (Curso) CriadorDeComponentes.createComponentManual(Curso.class, scan);
-                Curso.addToList(c1);
-                break;
-            case "3":
-                Disciplina d1 = (Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan);
-                Disciplina.addToList(d1);
-                break;
-            case "4":
-                Usuario u4 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                Professor.addToList(new Professor(u4.getLogin(), u4.getSenha()));
-                break;
-            case "5":
-                Usuario u5 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                Secretario.addToList(new Secretario(u5.getLogin(), u5.getSenha()));
-                break;
-            case "6":
-                Turma.addToList((Turma) CriadorDeComponentes.createComponentManual(Turma.class, scan));
-                break;
-            default:
-                System.out.println("Favor selecionar uma opção válida");
-                break;
-        }
+            op = scan.nextLine();
+
+            switch (op) {
+                case "0":
+                    break;
+                case "1":
+                    Usuario u1 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
+                    Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
+                    break;
+                case "2":
+                    Curso c1 = (Curso) CriadorDeComponentes.createComponentManual(Curso.class, scan);
+                    Curso.addToList(c1);
+                    break;
+                case "3":
+                    Disciplina d1 = (Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan);
+                    Disciplina.addToList(d1);
+                    break;
+                case "4":
+                    Usuario u4 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
+                    Professor.addToList(new Professor(u4.getLogin(), u4.getSenha()));
+                    break;
+                case "5":
+                    Usuario u5 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
+                    Secretario.addToList(new Secretario(u5.getLogin(), u5.getSenha()));
+                    break;
+                case "6":
+                    Turma.addToList((Turma) CriadorDeComponentes.createComponentManual(Turma.class, scan));
+                    break;
+                default:
+                    System.out.println("Favor selecionar uma opção válida");
+                    break;
+            }
+        } while (!op.equals("0"));
     }
 
     private static void verTodosRegistros() {
