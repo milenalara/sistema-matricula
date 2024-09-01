@@ -28,22 +28,25 @@ public class Curso implements Serializable{
         return null;
     }
    
+    public Curso(){
+        this.disciplinasIds = new String[1000];
+    }
 
     public Curso(String nome, int creditos, String[] disciplinasId){
         super();
         this.nome = nome;
         this.creditos = creditos;
         this.disciplinasIds = disciplinasId;
-        Curso.addToList(this);
     }
 
     @Override
     public String toString(){
 
-        String infos =  nome + "Creditos: " + String.valueOf(creditos) + "\tDisciplinas: ";
+        String infos =  nome + "\tCreditos: " + String.valueOf(creditos) + "\tDisciplinas: ";
 
         for (String disciplina : disciplinasIds) {
-            infos = infos + disciplina + "\t";
+            if(disciplina == null) break;
+            infos = infos + disciplina + "\n\t";
         }
 
         return infos;
@@ -70,6 +73,8 @@ public class Curso implements Serializable{
         Curso.cursos = cursos;
     }
     
-
+    public String[] getDisciplinas() {
+        return disciplinasIds;
+    }
 
 }

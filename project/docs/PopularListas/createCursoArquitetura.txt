@@ -1,0 +1,62 @@
+3
+A
+1
+2
+1
+2
+Arquitetura e Urbanismo
+2000
+Desenho Técnico Arquitetônico
+Projeto de Arquitetura I
+Materiais de Construção
+Projeto de Urbanismo I
+Planejamento Urbano e Regional
+Projeto de Arquitetura II
+Conforto Ambiental
+História da Arquitetura e Urbanismo
+Estética e História da Arte
+Projeto de Arquitetura III
+Projeto de Interiores
+Estruturas Arquitetônicas
+Planejamento Urbano e Regional II
+Sistemas Estruturais
+Projeto de Paisagismo
+Projeto de Arquitetura IV
+Tecnologias Construtivas
+Gestão de Obras
+Desenho de Sombra e Perspectiva
+Técnicas Retrospectivas de Edificações
+Patrimônio Histórico e Cultural
+Projeto Executivo de Arquitetura
+Projeto de Urbanismo II
+Sustentabilidade na Construção Civil
+Ética e Legislação Profissional
+Acessibilidade em Projetos Arquitetônicos
+Gerenciamento de Projetos Arquitetônicos
+Projeto de Restauração de Edifícios
+Design de Interiores Comerciais
+Projeto de Arquitetura V
+Topografia e Geoprocessamento
+Modelagem de Informação da Construção (BIM)
+Gestão Urbana e Ambiental
+Projeto de Arquitetura VI
+Tópicos Avançados em Arquitetura
+Técnicas de Representação Gráfica
+Ergonomia em Projetos Arquitetônicos
+Técnicas de Construção Sustentável
+Projeto de Arquitetura VII
+Fundamentos de Acústica Arquitetônica
+Projeto Urbano Sustentável
+Planejamento de Espaços Públicos
+Projeto de Arquitetura VIII
+Legislação Urbanística e Ambiental
+Projeto Integrado de Urbanismo
+Projeto de Arquitetura IX
+Gestão de Riscos em Obras
+Tecnologias Emergentes em Arquitetura
+Prática Profissional em Arquitetura
+Estágio Supervisionado em Arquitetura
+Trabalho de Conclusão de Curso (TCC)
+FIM
+0
+0

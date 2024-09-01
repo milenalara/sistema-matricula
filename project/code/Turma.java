@@ -1,5 +1,4 @@
 import java.util.List;
-import java.util.Date;
 import java.io.Serializable;
 import java.util.ArrayList;
 
@@ -12,13 +11,18 @@ public class Turma implements Serializable {
     private static List<Turma> turmas;
 
     public Turma() {
-        name = Long.toString(new Date().getTime()); // generating random number for Id
-        Turma.addToList(this);
+        // Turma.addToList(this);
+        this.name = generateId();
     }
     
     public Turma(String disciplinaId) {
         this.disciplinaId = disciplinaId;
-        Turma.addToList(this);
+        // Turma.addToList(this);
+        this.name = generateId();
+    }
+
+    public String generateId() {
+        return "Turma " + turmas.indexOf(this);
     }
 
     public static Turma getById(String identifier) {
@@ -78,9 +82,9 @@ public class Turma implements Serializable {
 
     @Override
     public String toString() {
-        String info = "ID: " + this.getId() + "Professor: " + professorId + " Disciplina: " + disciplinaId + " Alunos:";
+        String info = "ID: " + this.getId() + "\tProfessor: " + professorId + "\tDisciplina: " + disciplinaId + "\tAlunos:";
         for (Aluno aluno : alunos) {
-                info = info + " " + aluno.getLogin();
+                info = info + "\n\t" + aluno.getLogin();
         }
         return info;
     }

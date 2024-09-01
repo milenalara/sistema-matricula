@@ -1,0 +1,388 @@
+3
+Ana
+1234
+2
+1
+3
+Algoritmos e Estruturas de Dados
+true
+true
+3
+Arquitetura de Software
+true
+true
+3
+Banco de Dados
+true
+true
+3
+Desenvolvimento Ágil de Software
+true
+true
+3
+Engenharia de Requisitos
+true
+true
+3
+Gerência de Projetos de Software
+true
+true
+3
+Modelagem de Software
+true
+true
+3
+Padrões de Projeto
+true
+true
+3
+Programação Orientada a Objetos
+true
+true
+3
+Qualidade de Software
+true
+true
+3
+Teste de Software
+true
+true
+3
+Usabilidade e Experiência do Usuário
+true
+true
+3
+Sistemas Distribuídos
+true
+true
+3
+Desenvolvimento para Web
+true
+true
+3
+Segurança de Software
+true
+true
+3
+Integração Contínua e DevOps
+true
+true
+3
+Engenharia de Software Móvel
+true
+true
+3
+Reengenharia de Software
+true
+true
+3
+Gerenciamento de Configuração
+true
+true
+3
+Métodos Ágeis de Desenvolvimento
+true
+true
+3
+Design de Interface
+true
+true
+3
+Computação em Nuvem
+true
+true
+3
+Programação Funcional
+true
+true
+3
+Sistemas Operacionais
+true
+true
+3
+Desenvolvimento de Sistemas Embarcados
+true
+true
+3
+Análise e Projeto de Sistemas
+true
+true
+3
+Engenharia de Software para Jogos
+true
+true
+3
+Automação de Testes
+true
+true
+3
+Modelagem de Dados
+true
+true
+3
+Gerenciamento de Qualidade de Software
+true
+true
+3
+Métodos de Pesquisa em Engenharia de Software
+true
+true
+3
+Computação Paralela
+true
+true
+3
+Programação Concurrente
+true
+true
+3
+Design e Implementação de Algoritmos
+true
+true
+3
+Engenharia de Software para Internet das Coisas
+true
+true
+3
+Plataformas de Desenvolvimento
+true
+true
+3
+Gestão de Dados e Big Data
+true
+true
+3
+Programação Orientada a Aspectos
+true
+true
+3
+Desenvolvimento de API
+true
+true
+3
+Técnicas de Debugging
+true
+true
+3
+Infraestrutura de TI
+true
+true
+3
+Engenharia de Software para Sistemas Complexos
+true
+true
+3
+Engenharia de Software para Inteligência Artificial
+true
+true
+3
+Análise de Performance de Software
+true
+true
+3
+Tecnologias Emergentes em Software
+true
+true
+3
+Métodos de Avaliação de Software
+true
+true
+3
+Desenvolvimento de Software Sustentável
+true
+true
+3
+Engenharia de Software para Realidade Aumentada
+true
+true
+3
+Estratégias de Otimização de Software
+true
+true
+3
+Engenharia de Software para Computação em Nuvem
+true
+true
+3
+Sistemas de Informação
+true
+true
+3
+Arquitetura de Sistemas
+true
+true
+3
+Gestão de Projetos de Software
+true
+true
+3
+Engenharia de Software em Ambientes Regulamentados
+true
+true
+3
+Desenho Técnico Arquitetônico
+true
+true
+3
+Projeto de Arquitetura I
+true
+true
+3
+Materiais de Construção
+true
+true
+3
+Projeto de Urbanismo I
+true
+true
+3
+Planejamento Urbano e Regional
+true
+true
+3
+Projeto de Arquitetura II
+true
+true
+3
+Conforto Ambiental
+true
+true
+3
+História da Arquitetura e Urbanismo
+true
+true
+3
+Estética e História da Arte
+true
+true
+3
+Projeto de Arquitetura III
+true
+true
+3
+Projeto de Interiores
+true
+true
+3
+Estruturas Arquitetônicas
+true
+true
+3
+Planejamento Urbano e Regional II
+true
+true
+3
+Sistemas Estruturais
+true
+true
+3
+Projeto de Paisagismo
+true
+true
+3
+Projeto de Arquitetura IV
+true
+true
+3
+Tecnologias Construtivas
+true
+true
+3
+Gestão de Obras
+true
+true
+3
+Desenho de Sombra e Perspectiva
+true
+true
+3
+Técnicas Retrospectivas de Edificações
+true
+true
+3
+Patrimônio Histórico e Cultural
+true
+true
+3
+Projeto Executivo de Arquitetura
+true
+true
+3
+Projeto de Urbanismo II
+true
+true
+3
+Sustentabilidade na Construção Civil
+true
+true
+3
+Ética e Legislação Profissional
+true
+true
+3
+Acessibilidade em Projetos Arquitetônicos
+true
+true
+3
+Gerenciamento de Projetos Arquitetônicos
+true
+true
+3
+Projeto de Restauração de Edifícios
+true
+true
+3
+Design de Interiores Comerciais
+true
+true
+3
+Projeto de Arquitetura V
+true
+true
+3
+Topografia e Geoprocessamento
+true
+true
+3
+Modelagem de Informação da Construção (BIM)
+true
+true
+3
+Gestão Urbana e Ambiental
+true
+true
+3
+Projeto de Arquitetura VI
+true
+true
+3
+Tópicos Avançados em Arquitetura
+true
+true
+3
+Técnicas de Representação Gráfica
+true
+true
+3
+Ergonomia em Projetos Arquitetônicos
+true
+true
+3
+Técnicas de Construção Sustentável
+true
+true
+3
+Projeto de Arquitetura VII
+true
+true
+3
+Fundamentos de Acústica Arquitetônica
+true
+true
+3
+Projeto Urbano Sustentável
+true
+true
+0
+0
+

@@ -87,17 +87,27 @@ public class Cadastrador {
                         break;
                     case "1":
                         Usuario u1 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                        Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
+                        if (Aluno.getById(u1.getLogin()) == null) {
+                            Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
+                        } else {
+                            System.out.println("Login já cadastrado");
+                        }
                         break;
                     case "2":
-
                         Usuario u2 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                        Professor.addToList(new Professor(u2.getLogin(), u2.getSenha()));
+                        if (Professor.getById(u2.getLogin()) == null) {
+                            Professor.addToList(new Professor(u2.getLogin(), u2.getSenha()));
+                        } else {
+                            System.out.println("Login já cadastrado");
+                        }
                         break;
                     case "3":
-
                         Usuario u3 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                        Secretario.addToList(new Secretario(u3.getLogin(), u3.getSenha()));
+                        if (Professor.getById(u3.getLogin()) == null) {
+                            Secretario.addToList(new Secretario(u3.getLogin(), u3.getSenha()));
+                        } else {
+                            System.out.println("Login já cadastrado");
+                        }
                         break;
                 }
             } while (!op.equals("0"));

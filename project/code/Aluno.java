@@ -147,7 +147,7 @@ public class Aluno extends Usuario {
                 "\tDisciplinas em estudo: ";
 
         for (Disciplina disciplina : disciplinas) {
-            infos = infos + " " + Disciplina.getById(disciplina.getId()).getNome();
+            infos = infos + "\n\t" + Disciplina.getById(disciplina.getId()).getNome();
         }
 
         return infos;

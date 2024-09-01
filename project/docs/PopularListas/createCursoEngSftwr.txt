@@ -1,0 +1,44 @@
+3
+A
+1
+2
+1
+2
+Engenharia de Software
+1500
+Arquitetura de Software  
+Desenvolvimento Ágil de Software  
+Engenharia de Requisitos  
+Gerência de Projetos de Software  
+Modelagem de Software  
+Padrões de Projeto  
+Qualidade de Software  
+Teste de Software  
+Usabilidade e Experiência do Usuário  
+Segurança de Software  
+Integração Contínua e DevOps  
+Engenharia de Software Móvel  
+Reengenharia de Software  
+Gerenciamento de Configuração  
+Métodos Ágeis de Desenvolvimento  
+Engenharia de Software para Jogos  
+Automação de Testes  
+Gerenciamento de Qualidade de Software  
+Métodos de Pesquisa em Engenharia de Software  
+Engenharia de Software para Internet das Coisas  
+Programação Orientada a Aspectos  
+Desenvolvimento de API  
+Engenharia de Software para Sistemas Complexos  
+Engenharia de Software para Inteligência Artificial  
+Análise de Performance de Software  
+Tecnologias Emergentes em Software  
+Métodos de Avaliação de Software  
+Desenvolvimento de Software Sustentável  
+Engenharia de Software para Realidade Aumentada  
+Estratégias de Otimização de Software  
+Engenharia de Software para Computação em Nuvem  
+Gestão de Projetos de Software  
+Engenharia de Software em Ambientes Regulamentados
+FIM
+0
+0

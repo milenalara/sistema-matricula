@@ -162,23 +162,35 @@ public class App {
                     break;
                 case "1":
                     Usuario u1 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                    Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
+                    if (Aluno.getById(u1.getLogin()) == null) {
+                        Aluno.addToList(new Aluno(u1.getLogin(), u1.getSenha()));
+                    } else {
+                        System.out.println("Login já cadastrado");
+                    }
                     break;
                 case "2":
                     Curso c1 = (Curso) CriadorDeComponentes.createComponentManual(Curso.class, scan);
-                    Curso.addToList(c1);
+                    Curso.addToList(new Curso(c1.getNome(), c1.getCreditos(), c1.getDisciplinas()));
                     break;
                 case "3":
                     Disciplina d1 = (Disciplina) CriadorDeComponentes.createComponentManual(Disciplina.class, scan);
                     Disciplina.addToList(d1);
                     break;
                 case "4":
-                    Usuario u4 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                    Professor.addToList(new Professor(u4.getLogin(), u4.getSenha()));
+                    Usuario u2 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
+                    if (Professor.getById(u2.getLogin()) == null) {
+                        Professor.addToList(new Professor(u2.getLogin(), u2.getSenha()));
+                    } else {
+                        System.out.println("Login já cadastrado");
+                    }
                     break;
                 case "5":
-                    Usuario u5 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
-                    Secretario.addToList(new Secretario(u5.getLogin(), u5.getSenha()));
+                    Usuario u3 = (Usuario) CriadorDeComponentes.createComponentManual(Usuario.class, scan);
+                    if (Professor.getById(u3.getLogin()) == null) {
+                        Secretario.addToList(new Secretario(u3.getLogin(), u3.getSenha()));
+                    } else {
+                        System.out.println("Login já cadastrado");
+                    }
                     break;
                 case "6":
                     Turma.addToList((Turma) CriadorDeComponentes.createComponentManual(Turma.class, scan));

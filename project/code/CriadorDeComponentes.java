@@ -20,7 +20,7 @@ public class CriadorDeComponentes {
                 Object lista = field.get(componente);
 
                 System.out.println(
-                        "Digite " + field.getName() + " (Digite FIM para teriminar)");
+                        "Digite " + field.getName() + " (Digite FIM para terminar)");
                 String in = scan.nextLine();
                 int iter = 0;
                 while (!in.equals("FIM")) {
