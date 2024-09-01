@@ -77,4 +77,7 @@ Eu como sistema de cobrança quero receber notificações referentes a matrícul
 
 
 ## Instruções de utilização
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+1 - Clone o repositório
+2 - Abra a pasta do repositório no terminal de comando e execute `cd ./project/code`
+3 - `javac -cp . App.java`
+4 - `java App`
