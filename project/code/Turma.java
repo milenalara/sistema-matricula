@@ -12,6 +12,9 @@ public class Turma implements Serializable {
     private Integer MIN_ALUNOS = 3;
     private Integer MAX_ALUNOS = 60;
 
+    public Turma() {
+    }
+
     public Turma(String disciplinaId) {
         this.disciplinaId = disciplinaId;
         this.name = generateId();

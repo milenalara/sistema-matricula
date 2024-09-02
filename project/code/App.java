@@ -236,8 +236,13 @@ public class App {
             System.out.println("\n\tProfessor: " + turma.getProfessorId());
             System.out.println("\n\tDisciplina " + turma.getDisciplinaId());
             System.out.println("\n\tAlunos: ");
-            for (Aluno aluno : turma.getAlunos()) {
-                System.out.println("\n\t\t" + aluno.getLogin());
+            try {
+                
+                for (Aluno aluno : turma.getAlunos()) {
+                    System.out.println("\n\t\t" + aluno.getLogin());
+                }
+            } catch (Exception e) {
+               System.out.println("Não há alunos matriculados na turma ");
             }
         }
         System.out.println();
@@ -256,7 +261,7 @@ public class App {
         }
     }
 
-    private static void deletarRegistro(Scanner scan) {
+    private static void atualizarRegistro(Scanner scan) {
         System.out.println(
                 "Qual é o tipo de registro?\n1)Aluno\n2)Curso\n3)Disciplina\n4)Professor\n5)Secretario\n6)Turma");
         String opt = scan.nextLine();
@@ -289,8 +294,10 @@ public class App {
                     Secretario.addToList(new Secretario(u5.getLogin(), u5.getSenha()));
                     break;
                 case "6":
+                    Turma atualizar = Turma.getById(id);
                     Turma.getAll().remove(Turma.getById(id));
                     Turma.addToList((Turma) CriadorDeComponentes.createComponentManual(Turma.class, scan));
+                    Turma.getById(id).setAlunosIds(atualizar.getAlunos());
                     break;
 
                 default:
@@ -303,7 +310,7 @@ public class App {
 
     }
 
-    private static void atualizarRegistro(Scanner scan) {
+    private static void deletarRegistro(Scanner scan) {
 
         System.out.println(
                 "Qual é o tipo de registro?\n1)Aluno\n2)Curso\n3)Disciplina\n4)Professor\n5)Secretario\n6)Turma");
