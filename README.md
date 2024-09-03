@@ -77,10 +77,8 @@ Eu como sistema de cobrança quero receber notificações referentes a matrícul
 
 
 ## Instruções de utilização
-1 - Clone o repositório
+1 - Abra o diretório raiz do repositório no terminal de comando e execute `cd ./project/code`
 
-2 - Abra a pasta do repositório no terminal de comando e execute `cd ./project/code`
+2 - Execute o comando `javac -cp . App.java` para compilar o programa
 
-3 - `javac -cp . App.java`
-
-4 - `java App`
+3 - Execute o comando `java App` para executar o programa
